@@ -7,4 +7,4 @@ D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.Gene
 D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
 D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
 D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
-D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Form1.resources
+D:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.MainWindow.resources
