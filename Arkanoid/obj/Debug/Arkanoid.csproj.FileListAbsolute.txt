@@ -26,3 +26,16 @@ C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_A
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.exe.config
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.exe
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.pdb
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.exe.config
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.exe
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Arkanoid.pdb
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.PlayMenu.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Leaderboards.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Instructions.resources
