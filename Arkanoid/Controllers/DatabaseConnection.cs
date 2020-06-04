@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace Arkanoid.Controllers
 {
-    public class DatabaseConnection
+    public static class DatabaseConnection
     {
         private static string host = "ec2-34-232-147-86.compute-1.amazonaws.com",
             dataBase = "dfpsc1c2f4adr0",

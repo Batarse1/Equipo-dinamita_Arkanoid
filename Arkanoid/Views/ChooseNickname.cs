@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Arkanoid.Controllers;
 
 namespace Arkanoid
 {
@@ -24,6 +25,14 @@ namespace Arkanoid
         {
             StartMenu startMenu = new StartMenu();
             startMenu.Show();
+            Hide();
+        }
+
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            ControllerNickname.AddNickname(txtNickname.Text);
+            Game game = new Game(txtNickname.Text);
+            game.Show();
             Hide();
         }
     }

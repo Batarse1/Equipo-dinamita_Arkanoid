@@ -4,17 +4,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Arkanoid.Controllers;
 
 namespace Arkanoid
 {
     public partial class StartMenu : Form
     {
+        private SoundPlayer music = new SoundPlayer();
         public StartMenu()
         {
             InitializeComponent();
+            music.SoundLocation = "overworld-theme-super-mario-world.wav";
+            if (StaticAttributes.music == false)
+            {
+                music.PlayLooping();
+                StaticAttributes.music = true;
+            }
         }
 
         private void btnPlay_Click(object sender, EventArgs e)

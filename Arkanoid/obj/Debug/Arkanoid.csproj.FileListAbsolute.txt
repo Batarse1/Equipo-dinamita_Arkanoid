@@ -62,3 +62,4 @@ C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.ValueTuple.xm
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe.config
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.ChooseNickname.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Game.resources
