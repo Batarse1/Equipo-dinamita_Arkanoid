@@ -8,5 +8,13 @@ namespace Arkanoid
         {
             InitializeComponent();
         }
+
+        private void Game_mouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.X <= Width-Platform.Width)
+            {
+                Platform.Left = e.X;
+            }
+        }
     }
 }
