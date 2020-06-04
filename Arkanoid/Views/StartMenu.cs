@@ -19,8 +19,8 @@ namespace Arkanoid
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            PlayMenu playMenu = new PlayMenu();
-            playMenu.Show();
+            ChooseNickname chooseNickname = new ChooseNickname();
+            chooseNickname.Show();
             Hide();
         }
         

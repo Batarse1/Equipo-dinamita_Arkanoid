@@ -60,7 +60,7 @@
             this.tableLayoutPanelStartMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanelStartMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanelStartMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanelStartMenu.Size = new System.Drawing.Size(832, 433);
+            this.tableLayoutPanelStartMenu.Size = new System.Drawing.Size(882, 503);
             this.tableLayoutPanelStartMenu.TabIndex = 0;
             // 
             // btnPlay
@@ -70,10 +70,10 @@
             this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlay.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnPlay.Location = new System.Drawing.Point(427, 227);
+            this.btnPlay.Location = new System.Drawing.Point(452, 262);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(11);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(394, 32);
+            this.btnPlay.Size = new System.Drawing.Size(419, 40);
             this.btnPlay.TabIndex = 0;
             this.btnPlay.Text = "JUGAR";
             this.btnPlay.UseVisualStyleBackColor = false;
@@ -85,10 +85,10 @@
             this.btnLeaderboards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLeaderboards.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLeaderboards.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnLeaderboards.Location = new System.Drawing.Point(427, 281);
+            this.btnLeaderboards.Location = new System.Drawing.Point(452, 324);
             this.btnLeaderboards.Margin = new System.Windows.Forms.Padding(11);
             this.btnLeaderboards.Name = "btnLeaderboards";
-            this.btnLeaderboards.Size = new System.Drawing.Size(394, 32);
+            this.btnLeaderboards.Size = new System.Drawing.Size(419, 40);
             this.btnLeaderboards.TabIndex = 1;
             this.btnLeaderboards.Text = "PUNTAJES";
             this.btnLeaderboards.UseVisualStyleBackColor = false;
@@ -100,10 +100,10 @@
             this.btnInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInstructions.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnInstructions.Location = new System.Drawing.Point(427, 335);
+            this.btnInstructions.Location = new System.Drawing.Point(452, 386);
             this.btnInstructions.Margin = new System.Windows.Forms.Padding(11);
             this.btnInstructions.Name = "btnInstructions";
-            this.btnInstructions.Size = new System.Drawing.Size(394, 32);
+            this.btnInstructions.Size = new System.Drawing.Size(419, 40);
             this.btnInstructions.TabIndex = 2;
             this.btnInstructions.Text = "INSTRUCCIONES";
             this.btnInstructions.UseVisualStyleBackColor = false;
@@ -115,10 +115,10 @@
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnExit.Location = new System.Drawing.Point(427, 389);
+            this.btnExit.Location = new System.Drawing.Point(452, 448);
             this.btnExit.Margin = new System.Windows.Forms.Padding(11);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(394, 33);
+            this.btnExit.Size = new System.Drawing.Size(419, 44);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "SALIR";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -132,7 +132,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(3, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(826, 216);
+            this.lblTitle.Size = new System.Drawing.Size(876, 251);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Arkanoid by RIBAL";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -143,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(832, 433);
+            this.ClientSize = new System.Drawing.Size(882, 503);
             this.Controls.Add(this.tableLayoutPanelStartMenu);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
