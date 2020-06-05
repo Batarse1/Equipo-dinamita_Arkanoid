@@ -90,3 +90,4 @@ C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Ar
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.ChooseNickname.resources
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.PlatformMovement.resources
