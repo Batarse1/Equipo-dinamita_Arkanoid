@@ -31,17 +31,20 @@ namespace Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Arkanoid.ChooseNickname));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseNickname));
             this.tableLayoutPanelChooseNickname = new System.Windows.Forms.TableLayoutPanel();
             this.lblAskForNickname = new System.Windows.Forms.Label();
-            this.lblNickname = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.txtNickname = new System.Windows.Forms.TextBox();
+            this.lblNickname = new System.Windows.Forms.Label();
             this.tableLayoutPanelChooseNickname.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanelChooseNickname
+            // 
             this.tableLayoutPanelChooseNickname.ColumnCount = 5;
             this.tableLayoutPanelChooseNickname.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelChooseNickname.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -67,6 +70,9 @@ namespace Arkanoid
             this.tableLayoutPanelChooseNickname.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelChooseNickname.Size = new System.Drawing.Size(882, 503);
             this.tableLayoutPanelChooseNickname.TabIndex = 0;
+            // 
+            // lblAskForNickname
+            // 
             this.lblAskForNickname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblAskForNickname.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblAskForNickname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -77,16 +83,9 @@ namespace Arkanoid
             this.lblAskForNickname.TabIndex = 1;
             this.lblAskForNickname.Text = "ALIAS";
             this.lblAskForNickname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNickname.BackColor = System.Drawing.Color.Firebrick;
-            this.lblNickname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNickname.Font = new System.Drawing.Font("Super Mario 256", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNickname.Location = new System.Drawing.Point(575, 115);
-            this.lblNickname.Margin = new System.Windows.Forms.Padding(3);
-            this.lblNickname.Name = "lblNickname";
-            this.lblNickname.Size = new System.Drawing.Size(258, 56);
-            this.lblNickname.TabIndex = 4;
-            this.lblNickname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnReturn
+            // 
             this.btnReturn.BackColor = System.Drawing.Color.Snow;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReturn.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -100,6 +99,9 @@ namespace Arkanoid
             this.btnReturn.Text = "VOLVER";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // pictureBox1
+            // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,6 +111,9 @@ namespace Arkanoid
             this.pictureBox1.Size = new System.Drawing.Size(258, 381);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnPlay
+            // 
             this.btnPlay.BackColor = System.Drawing.Color.Snow;
             this.btnPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -122,6 +127,9 @@ namespace Arkanoid
             this.btnPlay.Text = "JUGAR";
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // txtNickname
+            // 
             this.txtNickname.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanelChooseNickname.SetColumnSpan(this.txtNickname, 2);
             this.txtNickname.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -130,6 +138,22 @@ namespace Arkanoid
             this.txtNickname.Size = new System.Drawing.Size(522, 37);
             this.txtNickname.TabIndex = 2;
             this.txtNickname.TextChanged += new System.EventHandler(this.nickname_TextChanged);
+            // 
+            // lblNickname
+            // 
+            this.lblNickname.BackColor = System.Drawing.Color.Firebrick;
+            this.lblNickname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNickname.Font = new System.Drawing.Font("Super Mario 256", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblNickname.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNickname.Location = new System.Drawing.Point(575, 115);
+            this.lblNickname.Margin = new System.Windows.Forms.Padding(3);
+            this.lblNickname.Name = "lblNickname";
+            this.lblNickname.Size = new System.Drawing.Size(258, 56);
+            this.lblNickname.TabIndex = 4;
+            this.lblNickname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ChooseNickname
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
