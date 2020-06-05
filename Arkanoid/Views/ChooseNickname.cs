@@ -30,7 +30,6 @@ namespace Arkanoid
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            ControllerNickname.AddNickname(txtNickname.Text);
             Game game = new Game(txtNickname.Text);
             game.Show();
             Hide();
