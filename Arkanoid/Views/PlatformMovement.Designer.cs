@@ -31,36 +31,44 @@ namespace Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(PlatformMovement));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlatformMovement));
+            this.platform = new System.Windows.Forms.PictureBox();
+            this.platformTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize) (this.platform)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // platform
             // 
-            this.pictureBox1.BackgroundImage =
-                ((System.Drawing.Image) (resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 25);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.platform.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("platform.BackgroundImage")));
+            this.platform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.platform.Location = new System.Drawing.Point(0, 28);
+            this.platform.Name = "platform";
+            this.platform.Size = new System.Drawing.Size(124, 22);
+            this.platform.TabIndex = 0;
+            this.platform.TabStop = false;
+            // 
+            // platformTimer
+            // 
+            this.platformTimer.Enabled = true;
+            this.platformTimer.Interval = 50;
+            this.platformTimer.Tick += new System.EventHandler(this.platformTimer_Tick);
             // 
             // PlatformMovement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.platform);
             this.Name = "PlatformMovement";
-            this.Size = new System.Drawing.Size(201, 46);
-            ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(571, 64);
+            ((System.ComponentModel.ISupportInitialize) (this.platform)).EndInit();
             this.ResumeLayout(false);
         }
 
-        #endregion
+        private System.Windows.Forms.PictureBox platform;
+        private System.Windows.Forms.Timer platformTimer;
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        #endregion
     }
 }

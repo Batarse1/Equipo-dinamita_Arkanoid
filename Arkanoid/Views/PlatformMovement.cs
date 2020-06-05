@@ -1,14 +1,22 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
+using Arkanoid.Controllers;
 
 namespace Arkanoid
 {
     public partial class PlatformMovement : UserControl
     {
-        private MouseEventArgs mouse;
-        public PlatformMovement(MouseEventArgs e)
+        public PlatformMovement()
         {
-            mouse = e;
             InitializeComponent();
+        }
+
+        private void platformTimer_Tick(object sender, EventArgs e)
+        {
+            if (StaticAttributes.location <= Width-platform.Width)
+            {
+                platform.Left = StaticAttributes.location;
+            }
         }
     }
 }

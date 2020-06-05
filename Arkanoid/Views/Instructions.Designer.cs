@@ -31,7 +31,7 @@ namespace Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Arkanoid.Instructions));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instructions));
             this.tableLayoutPanelInstructions = new System.Windows.Forms.TableLayoutPanel();
             this.btnReturn = new System.Windows.Forms.Button();
             this.pictureBoxPeach = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,9 @@ namespace Arkanoid
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxPeach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxControls)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanelInstructions
+            // 
             this.tableLayoutPanelInstructions.ColumnCount = 4;
             this.tableLayoutPanelInstructions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelInstructions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -63,6 +66,9 @@ namespace Arkanoid
             this.tableLayoutPanelInstructions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanelInstructions.Size = new System.Drawing.Size(882, 503);
             this.tableLayoutPanelInstructions.TabIndex = 0;
+            // 
+            // btnReturn
+            // 
             this.btnReturn.BackColor = System.Drawing.Color.LemonChiffon;
             this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -75,6 +81,9 @@ namespace Arkanoid
             this.btnReturn.Text = "VOLVER";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // pictureBoxPeach
+            // 
             this.pictureBoxPeach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxPeach.Location = new System.Drawing.Point(488, 28);
             this.pictureBoxPeach.Name = "pictureBoxPeach";
@@ -82,6 +91,9 @@ namespace Arkanoid
             this.pictureBoxPeach.Size = new System.Drawing.Size(346, 294);
             this.pictureBoxPeach.TabIndex = 1;
             this.pictureBoxPeach.TabStop = false;
+            // 
+            // lblHelp
+            // 
             this.lblHelp.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (192)))), ((int) (((byte) (255)))));
             this.lblHelp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -92,6 +104,9 @@ namespace Arkanoid
             this.lblHelp.Size = new System.Drawing.Size(435, 150);
             this.lblHelp.TabIndex = 2;
             this.lblHelp.Text = "Bowser me tiene secuestrada, gran gei\r\n";
+            // 
+            // pictureBoxControls
+            // 
             this.pictureBoxControls.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxControls.BackgroundImage")));
             this.pictureBoxControls.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxControls.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -101,6 +116,9 @@ namespace Arkanoid
             this.pictureBoxControls.Size = new System.Drawing.Size(435, 144);
             this.pictureBoxControls.TabIndex = 3;
             this.pictureBoxControls.TabStop = false;
+            // 
+            // Instructions
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;

@@ -31,70 +31,47 @@ namespace Arkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Platform = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.Platform)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            this.tableLayoutPanelGame = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelGame
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.Platform, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 422);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // Platform
-            // 
-            this.Platform.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tableLayoutPanel1.SetColumnSpan(this.Platform, 2);
-            this.Platform.Location = new System.Drawing.Point(256, 382);
-            this.Platform.Name = "Platform";
-            this.Platform.Size = new System.Drawing.Size(187, 30);
-            this.Platform.TabIndex = 0;
-            this.Platform.TabStop = false;
+            this.tableLayoutPanelGame.ColumnCount = 3;
+            this.tableLayoutPanelGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelGame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelGame.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelGame.Name = "tableLayoutPanelGame";
+            this.tableLayoutPanelGame.RowCount = 4;
+            this.tableLayoutPanelGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanelGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
+            this.tableLayoutPanelGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
+            this.tableLayoutPanelGame.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanelGame.Size = new System.Drawing.Size(882, 503);
+            this.tableLayoutPanelGame.TabIndex = 1;
+            this.tableLayoutPanelGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanelGame_MouseMove);
             // 
             // Game
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(700, 422);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ClientSize = new System.Drawing.Size(882, 503);
+            this.Controls.Add(this.tableLayoutPanelGame);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Game";
-            this.Text = "Game";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Game_mouseMove);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize) (this.Platform)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Arkanoid by RIBAL";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.ResumeLayout(false);
         }
 
-        #endregion
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelGame;
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.PictureBox Platform;
+        #endregion
     }
 }
