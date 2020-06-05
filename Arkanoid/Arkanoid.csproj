@@ -118,6 +118,12 @@
         <Compile Include="Views\ChooseNickname.Designer.cs">
           <DependentUpon>ChooseNickname.cs</DependentUpon>
         </Compile>
+        <Compile Include="Views\PlatformMovement.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="Views\PlatformMovement.Designer.cs">
+          <DependentUpon>PlatformMovement.cs</DependentUpon>
+        </Compile>
         <Compile Include="Views\StartMenu.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -144,6 +150,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Views\ChooseNickname.resx">
           <DependentUpon>ChooseNickname.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Views\PlatformMovement.resx">
+          <DependentUpon>PlatformMovement.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Views\StartMenu.resx">
           <DependentUpon>StartMenu.cs</DependentUpon>
