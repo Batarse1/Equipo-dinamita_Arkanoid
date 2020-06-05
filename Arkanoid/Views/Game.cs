@@ -10,7 +10,7 @@ namespace Arkanoid
         }
 
         private void Game_mouseMove(object sender, MouseEventArgs e)
-        {
+        {     //hola :v
             if (e.X <= Width-Platform.Width)
             {
                 Platform.Left = e.X;
