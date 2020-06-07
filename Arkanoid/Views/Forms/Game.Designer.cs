@@ -32,7 +32,7 @@ namespace Arkanoid
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Arkanoid.Game));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.tableLayoutPanelGame = new System.Windows.Forms.TableLayoutPanel();
             this.lblClockTimer = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
@@ -44,6 +44,9 @@ namespace Arkanoid
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxLives)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxClockTimer)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableLayoutPanelGame
+            // 
             this.tableLayoutPanelGame.ColumnCount = 5;
             this.tableLayoutPanelGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.5F));
             this.tableLayoutPanelGame.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72F));
@@ -66,6 +69,9 @@ namespace Arkanoid
             this.tableLayoutPanelGame.Size = new System.Drawing.Size(882, 503);
             this.tableLayoutPanelGame.TabIndex = 1;
             this.tableLayoutPanelGame.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tableLayoutPanelGame_MouseMove);
+            // 
+            // lblClockTimer
+            // 
             this.lblClockTimer.BackColor = System.Drawing.Color.Firebrick;
             this.lblClockTimer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblClockTimer.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -78,6 +84,9 @@ namespace Arkanoid
             this.lblClockTimer.TabIndex = 4;
             this.lblClockTimer.Text = "1000";
             this.lblClockTimer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblScore
+            // 
             this.lblScore.BackColor = System.Drawing.Color.Firebrick;
             this.lblScore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblScore.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
@@ -90,6 +99,9 @@ namespace Arkanoid
             this.lblScore.TabIndex = 2;
             this.lblScore.Text = "00100";
             this.lblScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBoxLives
+            // 
             this.pictureBoxLives.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBoxLives.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxLives.BackgroundImage")));
             this.pictureBoxLives.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -100,6 +112,9 @@ namespace Arkanoid
             this.pictureBoxLives.Size = new System.Drawing.Size(22, 25);
             this.pictureBoxLives.TabIndex = 0;
             this.pictureBoxLives.TabStop = false;
+            // 
+            // lblLives
+            // 
             this.lblLives.BackColor = System.Drawing.Color.Firebrick;
             this.lblLives.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblLives.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,6 +126,9 @@ namespace Arkanoid
             this.lblLives.Size = new System.Drawing.Size(635, 25);
             this.lblLives.TabIndex = 1;
             this.lblLives.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBoxClockTimer
+            // 
             this.pictureBoxClockTimer.BackColor = System.Drawing.Color.Firebrick;
             this.pictureBoxClockTimer.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxClockTimer.BackgroundImage")));
             this.pictureBoxClockTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -121,9 +139,15 @@ namespace Arkanoid
             this.pictureBoxClockTimer.Size = new System.Drawing.Size(22, 25);
             this.pictureBoxClockTimer.TabIndex = 3;
             this.pictureBoxClockTimer.TabStop = false;
+            // 
+            // clockTimer
+            // 
             this.clockTimer.Enabled = true;
             this.clockTimer.Interval = 1000;
             this.clockTimer.Tick += new System.EventHandler(this.clockTimer_Tick);
+            // 
+            // Game
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;

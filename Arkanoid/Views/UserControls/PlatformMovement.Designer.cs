@@ -42,7 +42,7 @@ namespace Arkanoid
             // 
             this.platform.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("platform.BackgroundImage")));
             this.platform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.platform.Location = new System.Drawing.Point(0, 0);
+            this.platform.Location = new System.Drawing.Point(180, 0);
             this.platform.Name = "platform";
             this.platform.Size = new System.Drawing.Size(208, 68);
             this.platform.TabIndex = 0;
@@ -63,6 +63,7 @@ namespace Arkanoid
             this.Controls.Add(this.platform);
             this.Name = "PlatformMovement";
             this.Size = new System.Drawing.Size(571, 68);
+            this.Load += new System.EventHandler(this.PlatformMovement_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PlatformMovement_KeyDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PlatformMovement_MouseMove);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PlatformMovement_PreviewKeyDown);

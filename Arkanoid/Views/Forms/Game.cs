@@ -6,7 +6,6 @@ namespace Arkanoid
 {
     public partial class Game : Form
     {
-        private UserControl current = null;
         public Game(string nickname)
         {
             InitializeComponent();
@@ -16,13 +15,18 @@ namespace Arkanoid
             WindowState = FormWindowState.Maximized;
             
             //Add PlatformMovement User Control
-            current = new PlatformMovement();
-            current.Dock = DockStyle.Fill;
-            tableLayoutPanelGame.Controls.Add(current, 0,2);
-            tableLayoutPanelGame.SetColumnSpan(current, 5);
+            UserControl platformMovement = new PlatformMovement();
+            platformMovement.Dock = DockStyle.Fill;
+            tableLayoutPanelGame.Controls.Add(platformMovement, 0,2);
+            tableLayoutPanelGame.SetColumnSpan(platformMovement, 5);
+            
+            UserControl marioAndBricks = new MarioAndBricks();
+            marioAndBricks.Dock = DockStyle.Fill;
+            tableLayoutPanelGame.Controls.Add(marioAndBricks, 0,1);
+            tableLayoutPanelGame.SetColumnSpan(marioAndBricks, 5);            
         }
 
-        private void tableLayoutPanelGame_MouseMove(object sender, MouseEventArgs e)
+        public void tableLayoutPanelGame_MouseMove(object sender, MouseEventArgs e)
         {
             //TableLayoutColumnStyleCollection columnStyles = tableLayoutPanelGame.ColumnStyles;
             //TableLayoutRowStyleCollection rowStyles = tableLayoutPanelGame.RowStyles;

@@ -9,21 +9,21 @@ namespace Arkanoid
         public PlatformMovement()
         {
             InitializeComponent();
-            platform.Height=Height;
         }
 
         private void platformTimer_Tick(object sender, EventArgs e)
         {
-            if (StaticAttributes.location >= 0 && StaticAttributes.location <= Width-platform.Width)
+            int thickness =  SystemInformation.BorderSize.Width;
+            if (StaticAttributes.location-platform.Width/2 >= 0 && StaticAttributes.location <= Width - platform.Width - 2*thickness)
             {
-                platform.Left = StaticAttributes.location;
+                platform.Left = StaticAttributes.location-platform.Width/2;
             }
-            else if (StaticAttributes.location < 0)
+            else if (StaticAttributes.location-platform.Width/2 < 0)
             {
                 platform.Left = 0;
             }
             else{
-                platform.Left = Width-platform.Width;
+                platform.Left = Width-platform.Width - 2*thickness;
             }
         }
 
@@ -34,6 +34,7 @@ namespace Arkanoid
 
         private void PlatformMovement_KeyDown(object sender, KeyEventArgs e)
         {
+            int thickness =  SystemInformation.BorderSize.Width;
             switch (e.KeyCode)
             {
                 case Keys.A:
@@ -43,7 +44,7 @@ namespace Arkanoid
                     }
                     break;
                 case Keys.D:
-                    if (platform.Left + 20 <= Width - platform.Width)
+                    if (platform.Left + 20 <= Width - platform.Width - 2*thickness)
                     {
                         StaticAttributes.location += 20;
                     }
@@ -53,6 +54,7 @@ namespace Arkanoid
 
         private void PlatformMovement_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
+            int thickness =  SystemInformation.BorderSize.Width;
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -62,7 +64,7 @@ namespace Arkanoid
                     }
                     break;
                 case Keys.Right:
-                    if (platform.Left + 10 <= Width - platform.Width)
+                    if (platform.Left + 10 <= Width - platform.Width - 2*thickness)
                     {
                         StaticAttributes.location += 20;
                     }
@@ -72,7 +74,14 @@ namespace Arkanoid
 
         private void platform_MouseMove(object sender, MouseEventArgs e)
         {
-            StaticAttributes.location += e.X;
+            StaticAttributes.location = platform.Left + e.X;
+        }
+
+        private void PlatformMovement_Load(object sender, EventArgs e)
+        {
+            platform.Height=Height;
+            platform.Left = (Width - platform.Width)/2;
+            StaticAttributes.location=platform.Left;
         }
     }
 }
