@@ -42,16 +42,17 @@ namespace Arkanoid
             // 
             this.platform.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("platform.BackgroundImage")));
             this.platform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.platform.Location = new System.Drawing.Point(0, 28);
+            this.platform.Location = new System.Drawing.Point(0, 0);
             this.platform.Name = "platform";
-            this.platform.Size = new System.Drawing.Size(124, 22);
+            this.platform.Size = new System.Drawing.Size(208, 68);
             this.platform.TabIndex = 0;
             this.platform.TabStop = false;
+            this.platform.MouseMove += new System.Windows.Forms.MouseEventHandler(this.platform_MouseMove);
             // 
             // platformTimer
             // 
             this.platformTimer.Enabled = true;
-            this.platformTimer.Interval = 50;
+            this.platformTimer.Interval = 30;
             this.platformTimer.Tick += new System.EventHandler(this.platformTimer_Tick);
             // 
             // PlatformMovement
@@ -61,7 +62,10 @@ namespace Arkanoid
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.platform);
             this.Name = "PlatformMovement";
-            this.Size = new System.Drawing.Size(571, 64);
+            this.Size = new System.Drawing.Size(571, 68);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PlatformMovement_KeyDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PlatformMovement_MouseMove);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.PlatformMovement_PreviewKeyDown);
             ((System.ComponentModel.ISupportInitialize) (this.platform)).EndInit();
             this.ResumeLayout(false);
         }

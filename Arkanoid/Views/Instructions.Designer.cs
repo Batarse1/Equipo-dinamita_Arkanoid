@@ -97,7 +97,7 @@ namespace Arkanoid
             this.lblHelp.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (192)))), ((int) (((byte) (255)))));
             this.lblHelp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblHelp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblHelp.Font = new System.Drawing.Font("Super Mario 256", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblHelp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblHelp.Location = new System.Drawing.Point(47, 25);
             this.lblHelp.Name = "lblHelp";
