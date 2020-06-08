@@ -3,6 +3,6 @@
     public static class GameData
     {
         public static bool gameInitiated = false;
-        public static int dirX = 5, dirY = -dirX;
+        public static int dirX = 10, dirY = -dirX;
     }
 }

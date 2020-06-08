@@ -6,6 +6,9 @@ namespace Arkanoid.Models
     {
         public int hits { get; set; }
 
-        public Brick() : base() { }
+        public Brick() : base()
+        {
+            
+        }
     }
 }

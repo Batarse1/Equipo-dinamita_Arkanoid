@@ -32,20 +32,20 @@ namespace Arkanoid.Views.UserControls
 
                     if (j == 0)
                     {
-                        bricksMatrix[i, j].hits = 2;
+                        bricksMatrix[i,j].hits = 2;
                     }
                     else
                     {
-                        bricksMatrix[i, j].hits = 1;
+                        bricksMatrix[i,j].hits = 1;
                     }
-                    bricksMatrix[i, j].BackgroundImage = Image.FromFile("../../Resources/brick.png");
-                    bricksMatrix[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    bricksMatrix[i, j].Height = brickHeight;
-                    bricksMatrix[i, j].Width = brickWidth;
-                    bricksMatrix[i, j].Left = initialX + i * brickWidth;
-                    bricksMatrix[i, j].Top = j * brickHeight;
-                    bricksMatrix[i, j].Tag = "tileTag";
-                    bricksMatrix[i, j].MouseMove += bricksMatrix_MouseMove;
+                    bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/brick.png");
+                    bricksMatrix[i,j].BackgroundImageLayout = ImageLayout.Stretch;
+                    bricksMatrix[i,j].Height = brickHeight;
+                    bricksMatrix[i,j].Width = brickWidth;
+                    bricksMatrix[i,j].Left = initialX + i * brickWidth;
+                    bricksMatrix[i,j].Top = j * brickHeight;
+                    bricksMatrix[i,j].Tag = "tileTag";
+                    bricksMatrix[i,j].MouseMove += bricksMatrix_MouseMove;
                     Controls.Add(bricksMatrix[i,j]);
                 }
             }
@@ -128,11 +128,11 @@ namespace Arkanoid.Views.UserControls
                         StaticAttributes.location += 20;
                     }
                     break;
-                case Keys.Space :
+                case Keys.Space:
                     if (GameData.dirX > 0 && GameData.dirY < 0 && !GameData.gameInitiated)
                     {
                         mario.BackgroundImage = Image.FromFile("../../Resources/jumpingMario.png");
-                        mario.Width *= 2;
+                        
                     }
                     GameData.gameInitiated = true;
                     break;
@@ -200,7 +200,7 @@ namespace Arkanoid.Views.UserControls
             {
                 for (int j = 0; j < yAxis; j++)
                 {
-                    if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds) )
+                    if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
                     {
                         bricksMatrix[i,j].hits--;
                         if (bricksMatrix[i,j].hits == 0)
@@ -208,7 +208,6 @@ namespace Arkanoid.Views.UserControls
                             Controls.Remove(bricksMatrix[i,j]);
                         }
                         
-                        GameData.dirX *= -1;
                         GameData.dirY *= -1;
                         
                         return;
