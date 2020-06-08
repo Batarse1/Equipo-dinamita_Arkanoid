@@ -1,4 +1,4 @@
-﻿namespace Arkanoid
+﻿namespace Arkanoid.Views.Forms
 {
     partial class StartMenu
     {

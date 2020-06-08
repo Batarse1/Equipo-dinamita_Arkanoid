@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Arkanoid
+namespace Arkanoid.Views.Forms
 {
     public partial class Leaderboards : Form
     {

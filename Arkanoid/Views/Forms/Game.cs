@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Arkanoid.Controllers;
+using Arkanoid.Views.UserControls;
 
 namespace Arkanoid
 {
@@ -13,17 +14,12 @@ namespace Arkanoid
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             WindowState = FormWindowState.Maximized;
-            
-            //Add PlatformMovement User Control
-            UserControl platformMovement = new PlatformMovement();
-            platformMovement.Dock = DockStyle.Fill;
-            tableLayoutPanelGame.Controls.Add(platformMovement, 0,2);
-            tableLayoutPanelGame.SetColumnSpan(platformMovement, 5);
-            
-            UserControl marioAndBricks = new MarioAndBricks();
-            marioAndBricks.Dock = DockStyle.Fill;
-            tableLayoutPanelGame.Controls.Add(marioAndBricks, 0,1);
-            tableLayoutPanelGame.SetColumnSpan(marioAndBricks, 5);            
+
+            UserControl marioAndPlatformAndBricks = new MarioAndPlatformAndBricks();
+            marioAndPlatformAndBricks.Dock = DockStyle.Fill;
+            tableLayoutPanelGame.Controls.Add(marioAndPlatformAndBricks, 0,1);
+            tableLayoutPanelGame.SetColumnSpan(marioAndPlatformAndBricks, 5);       
+            tableLayoutPanelGame.SetRowSpan(marioAndPlatformAndBricks,3);
         }
 
         public void tableLayoutPanelGame_MouseMove(object sender, MouseEventArgs e)

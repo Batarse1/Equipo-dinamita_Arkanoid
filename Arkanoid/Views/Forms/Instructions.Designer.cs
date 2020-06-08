@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Arkanoid
+namespace Arkanoid.Views.Forms
 {
     partial class Instructions
     {

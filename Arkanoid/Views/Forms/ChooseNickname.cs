@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Arkanoid.Controllers;
+using Arkanoid.Views.Forms;
 
 namespace Arkanoid
 {

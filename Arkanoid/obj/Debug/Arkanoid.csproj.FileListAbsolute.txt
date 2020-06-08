@@ -34,9 +34,6 @@ C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.Gene
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CoreCompileInputs.cache
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
-C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
-C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Leaderboards.resources
-C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Instructions.resources
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Npgsql.dll
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Buffers.dll
@@ -90,5 +87,7 @@ C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Ar
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.ChooseNickname.resources
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
-C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.PlatformMovement.resources
-C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.MarioAndBricks.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.UserControls.MarioAndPlatformAndBricks.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Instructions.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Leaderboards.resources
+C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.Forms.StartMenu.resources

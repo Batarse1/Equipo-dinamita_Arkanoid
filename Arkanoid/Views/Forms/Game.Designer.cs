@@ -125,6 +125,7 @@ namespace Arkanoid
             this.lblLives.Name = "lblLives";
             this.lblLives.Size = new System.Drawing.Size(635, 25);
             this.lblLives.TabIndex = 1;
+            this.lblLives.Text = "x3";
             this.lblLives.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBoxClockTimer

@@ -92,6 +92,7 @@
         <Compile Include="Controllers\DatabaseConnection.cs" />
         <Compile Include="Controllers\StaticAttributes.cs" />
         <Compile Include="Models\Brick.cs" />
+        <Compile Include="Models\GameData.cs" />
         <Compile Include="Models\Player.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,17 +126,11 @@
         <Compile Include="Views\Forms\StartMenu.Designer.cs">
           <DependentUpon>StartMenu.cs</DependentUpon>
         </Compile>
-        <Compile Include="Views\UserControls\MarioAndBricks.cs">
+        <Compile Include="Views\UserControls\MarioAndPlatformAndBricks.cs">
           <SubType>UserControl</SubType>
         </Compile>
-        <Compile Include="Views\UserControls\MarioAndBricks.Designer.cs">
-          <DependentUpon>MarioAndBricks.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Views\UserControls\PlatformMovement.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="Views\UserControls\PlatformMovement.Designer.cs">
-          <DependentUpon>PlatformMovement.cs</DependentUpon>
+        <Compile Include="Views\UserControls\MarioAndPlatformAndBricks.Designer.cs">
+          <DependentUpon>MarioAndPlatformAndBricks.cs</DependentUpon>
         </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -161,11 +156,8 @@
         <EmbeddedResource Include="Views\Forms\StartMenu.resx">
           <DependentUpon>StartMenu.cs</DependentUpon>
         </EmbeddedResource>
-        <EmbeddedResource Include="Views\UserControls\MarioAndBricks.resx">
-          <DependentUpon>MarioAndBricks.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Views\UserControls\PlatformMovement.resx">
-          <DependentUpon>PlatformMovement.cs</DependentUpon>
+        <EmbeddedResource Include="Views\UserControls\MarioAndPlatformAndBricks.resx">
+          <DependentUpon>MarioAndPlatformAndBricks.cs</DependentUpon>
         </EmbeddedResource>
         <None Include="packages.config" />
         <None Include="Properties\Settings.settings">
@@ -182,6 +174,8 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\jumpingMario.png" />
+      <Content Include="Resources\standingMario.png" />
       <Content Include="Resources\brick.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
