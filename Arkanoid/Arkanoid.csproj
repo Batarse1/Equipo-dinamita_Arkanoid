@@ -174,9 +174,10 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="Resources\jumpingMario.png" />
-      <Content Include="Resources\standingMario.png" />
+      <Content Include="Resources\MarioSprites\LeftJumpingMario.png" />
+      <Content Include="Resources\MarioSprites\RightJumpingMario.png" />
       <Content Include="Resources\brick.png" />
+      <Content Include="Resources\MarioSprites\StandingMario.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

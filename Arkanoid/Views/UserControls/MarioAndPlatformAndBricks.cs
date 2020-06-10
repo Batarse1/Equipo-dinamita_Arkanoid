@@ -20,9 +20,9 @@ namespace Arkanoid.Views.UserControls
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 5;
-            int brickHeight = (int)((((Height - 2*thickness)*30)/100)/yAxis);
-            int brickWidth = (int)(Width - 2*thickness) / xAxis;
-            int initialX = (int)((Width)-xAxis*brickWidth)/2;
+            int brickHeight = ((((Height - 2*thickness)*30)/100)/yAxis);
+            int brickWidth = (Width - 2*thickness) / xAxis;
+            int initialX = ((Width)-xAxis*brickWidth)/2;
             bricksMatrix = new Brick[xAxis,yAxis];
             for (int i = 0; i < xAxis; i++)
             {
@@ -49,9 +49,9 @@ namespace Arkanoid.Views.UserControls
                     Controls.Add(bricksMatrix[i,j]);
                 }
             }
-            int platformHeight = (int)(Height - 2*thickness)*3 /100;
-            int platformWidth = (int)(Width - 2*thickness)*10 / 100;
-            int heightDistance = (int)(Height - 2*thickness)*1 /100;
+            int platformHeight = (Height - 2*thickness)*3 /100;
+            int platformWidth = (Width - 2*thickness)*10 / 100;
+            int heightDistance = (Height - 2*thickness)*1 /100;
             
             platform.BackgroundImage = Image.FromFile("../../Resources/brick.png");
             platform.BackgroundImageLayout = ImageLayout.Stretch;
@@ -61,10 +61,10 @@ namespace Arkanoid.Views.UserControls
             platform.Top = Height - 2*thickness - platformHeight - heightDistance;
             platform.MouseMove += platform_MouseMove;
             
-            int marioHeight = (int)(Height - 2*thickness)*20 /100;
-            int marioWidth = (int)(Width - 2*thickness)*6 / 100;
+            int marioHeight = (Height - 2*thickness)*20 /100;
+            int marioWidth = (Width - 2*thickness)*6 / 100;
           
-            mario.BackgroundImage = Image.FromFile("../../Resources/standingMario.png");
+            mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
             mario.BackgroundImageLayout = ImageLayout.Stretch;
             mario.Width = marioWidth;
             mario.Height = marioHeight;
@@ -93,7 +93,7 @@ namespace Arkanoid.Views.UserControls
 
         private void MarioAndBricks_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            int thickness =  (int)SystemInformation.BorderSize.Width;
+            int thickness = SystemInformation.BorderSize.Width;
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -113,7 +113,7 @@ namespace Arkanoid.Views.UserControls
 
         private void MarioAndBricks_KeyDown(object sender, KeyEventArgs e)
         {
-            int thickness =  (int)SystemInformation.BorderSize.Width;
+            int thickness =  SystemInformation.BorderSize.Width;
             switch (e.KeyCode)
             {
                 case Keys.A:
@@ -131,8 +131,7 @@ namespace Arkanoid.Views.UserControls
                 case Keys.Space:
                     if (GameData.dirX > 0 && GameData.dirY < 0 && !GameData.gameInitiated)
                     {
-                        mario.BackgroundImage = Image.FromFile("../../Resources/jumpingMario.png");
-                        
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
                     }
                     GameData.gameInitiated = true;
                     break;
@@ -168,15 +167,11 @@ namespace Arkanoid.Views.UserControls
                 mario.Top += GameData.dirY;
                 collider2D();
             }
-            else
-            {
-                return;
-            }
         }
 
         private void collider2D()
         {
-            int thickness = (int) SystemInformation.BorderSize.Width;
+            int thickness = SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 5;
             if (mario.Bottom > Height)
@@ -187,6 +182,14 @@ namespace Arkanoid.Views.UserControls
             if (mario.Left < 0 || mario.Right > Width - 2 * thickness)
             {
                 GameData.dirX *= -1;
+                if (GameData.dirX > 0)
+                {
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
+                }
+                else
+                {
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMario.png");
+                }
                 return;
             }
 
@@ -209,7 +212,6 @@ namespace Arkanoid.Views.UserControls
                         }
                         
                         GameData.dirY *= -1;
-                        
                         return;
                     }
                 }
