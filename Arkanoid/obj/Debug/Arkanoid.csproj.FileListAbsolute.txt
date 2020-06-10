@@ -17,7 +17,6 @@ C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Ar
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
-C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.MainWindow.resources
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
 C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
@@ -91,3 +90,32 @@ C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Ar
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.PlatformMovement.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Npgsql.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Buffers.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Memory.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Text.Json.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.ValueTuple.dll
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Npgsql.pdb
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\Npgsql.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Buffers.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Memory.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Text.Json.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\bin\Debug\System.ValueTuple.xml
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe.config
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Game.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Instructions.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Leaderboards.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.ChooseNickname.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.PlatformMovement.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.StartMenu.resources
+C:\Users\drodr\Documents\Proyecto POO\Equipo-dinamita_Arkanoid\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
