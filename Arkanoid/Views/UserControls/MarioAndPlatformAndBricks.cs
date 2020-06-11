@@ -203,12 +203,13 @@ namespace Arkanoid.Views.UserControls
             {
                 for (int j = 0; j < yAxis; j++)
                 {
-                    if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
+                    if (bricksMatrix[i,j] != null && mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
                     {
                         bricksMatrix[i,j].hits--;
                         if (bricksMatrix[i,j].hits == 0)
                         {
                             Controls.Remove(bricksMatrix[i,j]);
+                            bricksMatrix[i, j] = null;
                         }
                         
                         GameData.dirY *= -1;
