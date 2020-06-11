@@ -1,14 +1,14 @@
 ﻿namespace Arkanoid.Models
 {
-    public class Player
+    public static class Player
     {
-        public string nickname { get; set; }
-        public int score { get; set; }
+        public static string nickname { get; set; }
+        public static string lives { get; set; }
+        public static string time { get; set; }
+        public static string score { get; set; }
 
-        public Player(string nickname, int score)
+        static Player()
         {
-            this.nickname = nickname;
-            this.score = score;
         }
     }
 }

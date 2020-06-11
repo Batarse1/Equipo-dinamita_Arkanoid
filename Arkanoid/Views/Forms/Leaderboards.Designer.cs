@@ -42,10 +42,10 @@ namespace Arkanoid.Views.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutShowLeaderboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -1005,18 +1005,6 @@ namespace Arkanoid.Views.Forms
             this.label6.Text = "Puntaje 6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label7
-            // 
-            this.tableLayoutShowLeaderboard.SetColumnSpan(this.label7, 3);
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.Location = new System.Drawing.Point(488, 300);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(285, 40);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Puntaje 7";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label8
             // 
             this.tableLayoutShowLeaderboard.SetColumnSpan(this.label8, 3);
@@ -1052,6 +1040,18 @@ namespace Arkanoid.Views.Forms
             this.label10.TabIndex = 13;
             this.label10.Text = "Puntaje 10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.tableLayoutShowLeaderboard.SetColumnSpan(this.label7, 3);
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label7.Location = new System.Drawing.Point(488, 300);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(285, 40);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Puntaje 7";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Leaderboards
             // 

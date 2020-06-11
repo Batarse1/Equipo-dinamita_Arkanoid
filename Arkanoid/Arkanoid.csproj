@@ -174,9 +174,12 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\Backgrounds\Instructions.png" />
+      <Content Include="Resources\Bricks\goldBrick.png" />
+      <Content Include="Resources\Bricks\brick.png" />
+      <Content Include="Resources\Fonts\SuperMario256.ttf" />
       <Content Include="Resources\MarioSprites\LeftJumpingMario.png" />
       <Content Include="Resources\MarioSprites\RightJumpingMario.png" />
-      <Content Include="Resources\brick.png" />
       <Content Include="Resources\MarioSprites\StandingMario.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

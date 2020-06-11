@@ -35,40 +35,30 @@ namespace Arkanoid.Views.UserControls
             this.platformTimer = new System.Windows.Forms.Timer(this.components);
             this.platform = new System.Windows.Forms.PictureBox();
             this.mario = new System.Windows.Forms.PictureBox();
-            this.gameTimer = new System.Windows.Forms.Timer(this.components);
+            this.Collider2D = new System.Windows.Forms.Timer(this.components);
+            this.MarioTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.platform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.mario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // platformTimer
-            // 
             this.platformTimer.Enabled = true;
             this.platformTimer.Interval = 30;
             this.platformTimer.Tick += new System.EventHandler(this.platformTimer_Tick);
-            // 
-            // platform
-            // 
             this.platform.Location = new System.Drawing.Point(175, 392);
             this.platform.Name = "platform";
             this.platform.Size = new System.Drawing.Size(212, 40);
             this.platform.TabIndex = 0;
             this.platform.TabStop = false;
-            // 
-            // mario
-            // 
             this.mario.Location = new System.Drawing.Point(204, 295);
             this.mario.Name = "mario";
             this.mario.Size = new System.Drawing.Size(130, 88);
             this.mario.TabIndex = 1;
             this.mario.TabStop = false;
-            // 
-            // gameTimer
-            // 
-            this.gameTimer.Enabled = true;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
-            // 
-            // MarioAndPlatformAndBricks
-            // 
+            this.Collider2D.Enabled = true;
+            this.Collider2D.Interval = 30;
+            this.Collider2D.Tick += new System.EventHandler(this.Collider2D_Tick);
+            this.MarioTimer.Enabled = true;
+            this.MarioTimer.Interval = 30;
+            this.MarioTimer.Tick += new System.EventHandler(this.MarioTimer_Tick_1);
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
@@ -86,8 +76,9 @@ namespace Arkanoid.Views.UserControls
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Timer gameTimer;
+        private System.Windows.Forms.Timer Collider2D;
         private System.Windows.Forms.PictureBox mario;
+        private System.Windows.Forms.Timer MarioTimer;
         private System.Windows.Forms.PictureBox platform;
         private System.Windows.Forms.Timer platformTimer;
 

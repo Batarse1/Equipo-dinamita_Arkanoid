@@ -69,7 +69,7 @@
             this.btnPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPlay.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.Location = new System.Drawing.Point(452, 262);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(11);
             this.btnPlay.Name = "btnPlay";
@@ -84,7 +84,7 @@
             this.btnLeaderboards.BackColor = System.Drawing.Color.LemonChiffon;
             this.btnLeaderboards.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnLeaderboards.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLeaderboards.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnLeaderboards.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnLeaderboards.Location = new System.Drawing.Point(452, 324);
             this.btnLeaderboards.Margin = new System.Windows.Forms.Padding(11);
             this.btnLeaderboards.Name = "btnLeaderboards";
@@ -99,7 +99,7 @@
             this.btnInstructions.BackColor = System.Drawing.Color.LemonChiffon;
             this.btnInstructions.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnInstructions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInstructions.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnInstructions.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnInstructions.Location = new System.Drawing.Point(452, 386);
             this.btnInstructions.Margin = new System.Windows.Forms.Padding(11);
             this.btnInstructions.Name = "btnInstructions";
@@ -114,7 +114,7 @@
             this.btnExit.BackColor = System.Drawing.Color.LemonChiffon;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("Super Mario 256", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.Location = new System.Drawing.Point(452, 448);
             this.btnExit.Margin = new System.Windows.Forms.Padding(11);
             this.btnExit.Name = "btnExit";
@@ -128,7 +128,7 @@
             // 
             this.tableLayoutPanelStartMenu.SetColumnSpan(this.lblTitle, 2);
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Super Mario 256", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(3, 0);
             this.lblTitle.Name = "lblTitle";
@@ -153,6 +153,7 @@
             this.Text = "Arkanoid by RIBAL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StartMenu_FormClosing);
+            this.Load += new System.EventHandler(this.StartMenu_Load);
             this.tableLayoutPanelStartMenu.ResumeLayout(false);
             this.ResumeLayout(false);
         }
