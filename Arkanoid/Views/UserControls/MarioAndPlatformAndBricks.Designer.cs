@@ -40,25 +40,43 @@ namespace Arkanoid.Views.UserControls
             ((System.ComponentModel.ISupportInitialize) (this.platform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.mario)).BeginInit();
             this.SuspendLayout();
+            // 
+            // platformTimer
+            // 
             this.platformTimer.Enabled = true;
             this.platformTimer.Interval = 30;
             this.platformTimer.Tick += new System.EventHandler(this.platformTimer_Tick);
+            // 
+            // platform
+            // 
             this.platform.Location = new System.Drawing.Point(175, 392);
             this.platform.Name = "platform";
             this.platform.Size = new System.Drawing.Size(212, 40);
             this.platform.TabIndex = 0;
             this.platform.TabStop = false;
+            // 
+            // mario
+            // 
             this.mario.Location = new System.Drawing.Point(204, 295);
             this.mario.Name = "mario";
             this.mario.Size = new System.Drawing.Size(130, 88);
             this.mario.TabIndex = 1;
             this.mario.TabStop = false;
+            // 
+            // Collider2D
+            // 
             this.Collider2D.Enabled = true;
-            this.Collider2D.Interval = 30;
+            this.Collider2D.Interval = 25;
             this.Collider2D.Tick += new System.EventHandler(this.Collider2D_Tick);
+            // 
+            // MarioTimer
+            // 
             this.MarioTimer.Enabled = true;
-            this.MarioTimer.Interval = 30;
+            this.MarioTimer.Interval = 25;
             this.MarioTimer.Tick += new System.EventHandler(this.MarioTimer_Tick_1);
+            // 
+            // MarioAndPlatformAndBricks
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;

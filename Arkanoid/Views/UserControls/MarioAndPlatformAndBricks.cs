@@ -3,13 +3,14 @@ using System.Drawing;
 using System.Windows.Forms;
 using Arkanoid.Controllers;
 using Arkanoid.Models;
+using Arkanoid.Views.Forms;
 
 namespace Arkanoid.Views.UserControls
 {
     public partial class MarioAndPlatformAndBricks : UserControl
     {
         private Brick[,] bricksMatrix;
-        
+        private int number_of_bricks = 0;
         public MarioAndPlatformAndBricks()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Arkanoid.Views.UserControls
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 4;
+            number_of_bricks = xAxis * yAxis;
             int brickHeight = ((((Height - 2*thickness)*40)/100)/yAxis);
             int brickWidth = (Width - 2*thickness) / xAxis;
             int initialX = ((Width)-xAxis*brickWidth)/2;
@@ -67,8 +69,8 @@ namespace Arkanoid.Views.UserControls
             platform.MouseMove += platform_MouseMove;
             
             //Making Mario
-            int marioHeight = (Height - 2*thickness)*16 /100;
-            int marioWidth = (Width - 2*thickness)*4 / 100;
+            int marioHeight = (Height - 2*thickness)*12 /100;
+            int marioWidth = (Width - 2*thickness)*3 / 100;
           
             mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
             mario.BackgroundImageLayout = ImageLayout.Stretch;
@@ -127,13 +129,13 @@ namespace Arkanoid.Views.UserControls
             switch (e.KeyCode)
             {
                 case Keys.A:
-                    if (platform.Left - 20 >= 0)
+                    if (platform.Left - 10 >= 0)
                     {
                         StaticAttributes.location -= 20;
                     }
                     break;
                 case Keys.D:
-                    if (platform.Left + 20 <= Width - platform.Width - 2*thickness)
+                    if (platform.Left + 10 <= Width - platform.Width - 2*thickness)
                     {
                         StaticAttributes.location += 20;
                     }
@@ -141,6 +143,7 @@ namespace Arkanoid.Views.UserControls
                 case Keys.Space:
                     if (GameData.dirX > 0 && GameData.dirY < 0 && !GameData.gameInitiated)
                     {
+                            
                         mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
                     }
                     GameData.gameInitiated = true;
@@ -191,6 +194,11 @@ namespace Arkanoid.Views.UserControls
                                     Controls.Remove(bricksMatrix[i,j]);
                                     bricksMatrix[i, j] = null;
                                     Player.score = Convert.ToString($"Puntaje: {Convert.ToInt32(Player.score.Substring(8)) + 100}");
+                                    number_of_bricks--;
+                                    if (number_of_bricks == 0)
+                                    {
+                                        Application.Exit();
+                                    }
                                 } 
                                 GameData.dirY *= -1; 
                                 return;
@@ -230,13 +238,13 @@ namespace Arkanoid.Views.UserControls
                     GameData.dirY = -3;
                 }
             }
-            if (mario.Top < 0)
+            else if (mario.Top < 0)
             {
                 //Rebound with top screen
                 GameData.dirY *= -1; 
                 return;
             }
-            if (mario.Left < 0 || mario.Right > Width - 2 * thickness)
+            else if (mario.Left < 0 || mario.Right > Width - 2 * thickness)
             {
                 //Rebound with walls
                 GameData.dirX *= -1;
@@ -250,7 +258,7 @@ namespace Arkanoid.Views.UserControls
                 }
                 return;
             }
-            if (mario.Bounds.IntersectsWith(platform.Bounds))
+            else if (mario.Bounds.IntersectsWith(platform.Bounds))
             {
                 //Rebound with platform
                 GameData.dirY *= -1;
