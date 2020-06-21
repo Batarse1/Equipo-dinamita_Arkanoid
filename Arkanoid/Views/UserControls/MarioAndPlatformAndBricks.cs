@@ -11,6 +11,7 @@ namespace Arkanoid.Views.UserControls
     {
         private Brick[,] bricksMatrix;
         private int number_of_bricks = 0;
+        private bool finished = false;
         public MarioAndPlatformAndBricks()
         {
             InitializeComponent();
@@ -193,11 +194,14 @@ namespace Arkanoid.Views.UserControls
                                 {
                                     Controls.Remove(bricksMatrix[i,j]);
                                     bricksMatrix[i, j] = null;
-                                    Player.score = Convert.ToString($"Puntaje: {Convert.ToInt32(Player.score.Substring(8)) + 100}");
+                                    Player.score = Convert.ToString($"Score: {Convert.ToInt32(Player.score.Substring(6)) + 100}");
                                     number_of_bricks--;
                                     if (number_of_bricks == 0)
                                     {
-                                        Application.Exit();
+                                        finished = true;
+                                        Congratulations congratulations = new Congratulations();
+                                        congratulations.Show();
+                                        Hide();
                                     }
                                 } 
                                 GameData.dirY *= -1; 
@@ -219,9 +223,9 @@ namespace Arkanoid.Views.UserControls
                 mario.Top += GameData.dirY;
             }
             if (mario.Bottom > Height)
-            {
+            {               
                 int lives = Convert.ToInt16(Player.lives.Substring(1)) - 1;
-                if (lives<0)
+                if (lives<0 && !finished)
                 {
                     //You lose
                     Application.Exit();
@@ -229,13 +233,13 @@ namespace Arkanoid.Views.UserControls
                 else
                 {
                     //restart game
-                    int marioHeight = (Height - 2*thickness)*16 /100;
+                    int marioHeight = (Height - 2*thickness)*12 /100;
                     Player.lives = $"x{lives}";
                     GameData.gameInitiated = false;
                     mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
                     mario.Top = platform.Top-marioHeight;
-                    GameData.dirX = 2;
-                    GameData.dirY = -3;
+                    GameData.dirX = 3;
+                    GameData.dirY = -4;
                 }
             }
             else if (mario.Top < 0)

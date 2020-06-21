@@ -33,7 +33,7 @@ namespace Arkanoid.Views.Forms
             var superMario256Font4 = new Font(pfc.Families[0],Height * 4 / 100); 
             //Button return values
             btnReturn.BackColor = Color.LemonChiffon;
-            btnReturn.Text = "VOLVER";
+            btnReturn.Text = "RETURN";
             btnReturn.Font = superMario256Font4;
             btnReturn.Dock = DockStyle.Fill;
             btnReturn.FlatStyle = FlatStyle.Popup;

@@ -73,7 +73,7 @@ namespace Arkanoid.Views.Forms
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             //Button Play values
             btnPlay.BackColor = Color.LemonChiffon;
-            btnPlay.Text = "JUGAR";
+            btnPlay.Text = "PLAY";
             btnPlay.Font = superMario256Font3;
             btnPlay.Dock = DockStyle.Fill;
             btnPlay.FlatStyle = FlatStyle.Popup;
@@ -81,7 +81,7 @@ namespace Arkanoid.Views.Forms
             btnPlay.TextAlign = ContentAlignment.MiddleCenter;
             //Button Leaderboards values
             btnLeaderboards.BackColor = Color.LemonChiffon;
-            btnLeaderboards.Text = "PUNTAJES";
+            btnLeaderboards.Text = "LEADERBOARDS";
             btnLeaderboards.Font = superMario256Font3;
             btnLeaderboards.Dock = DockStyle.Fill;
             btnLeaderboards.FlatStyle = FlatStyle.Popup;
@@ -89,7 +89,7 @@ namespace Arkanoid.Views.Forms
             btnLeaderboards.TextAlign = ContentAlignment.MiddleCenter;
             //Button Instructions values
             btnInstructions.BackColor = Color.LemonChiffon;
-            btnInstructions.Text = "INSTRUCIONES";
+            btnInstructions.Text = "INSTRUCTIONS";
             btnInstructions.Font = superMario256Font3;
             btnInstructions.Dock = DockStyle.Fill;
             btnInstructions.FlatStyle = FlatStyle.Popup;
@@ -97,7 +97,7 @@ namespace Arkanoid.Views.Forms
             btnInstructions.TextAlign = ContentAlignment.MiddleCenter;
             //Button Exit values
             btnExit.BackColor = Color.LemonChiffon;
-            btnExit.Text = "SALIR";
+            btnExit.Text = "EXIT";
             btnExit.Font = superMario256Font3;
             btnExit.Dock = DockStyle.Fill;
             btnExit.FlatStyle = FlatStyle.Popup;

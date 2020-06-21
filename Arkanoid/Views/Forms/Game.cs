@@ -26,8 +26,8 @@ namespace Arkanoid.Views.Forms
             //Add player values
             Player.nickname = nickname;
             Player.lives = "X3";
-            Player.time = "Tiempo: 800";
-            Player.score = "Puntaje: 0";
+            Player.time = "Time: 800";
+            Player.score = "Score: 0";
             //Add font
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");
@@ -72,12 +72,12 @@ namespace Arkanoid.Views.Forms
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             //Change labels
-            Player.time = Convert.ToString($"Tiempo: {Convert.ToInt32(lblClockTimer.Text.Substring(7)) - 1}");
+            Player.time = Convert.ToString($"Time: {Convert.ToInt32(lblClockTimer.Text.Substring(5)) - 1}");
             lblClockTimer.Text = Player.time;
             lblScore.Text = Player.score;
             lblLives.Text = Player.lives;
             //Time out
-            if(Player.time.Equals("Tiempo: 0")){
+            if(Player.time.Equals("Time: 0")){
                 MessageBox.Show("Perdiste...");
                 Application.Exit();
             }

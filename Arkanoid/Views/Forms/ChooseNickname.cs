@@ -49,7 +49,7 @@ namespace Arkanoid
             var superMario256Font4 = new Font(pfc.Families[0],Height * 4 / 100); 
             //Button return values
             btnReturn.BackColor = Color.Snow;
-            btnReturn.Text = "VOLVER";
+            btnReturn.Text = "RETURN";
             btnReturn.Font = superMario256Font4;
             btnReturn.Dock = DockStyle.Fill;
             btnReturn.FlatStyle = FlatStyle.Popup;
@@ -58,7 +58,7 @@ namespace Arkanoid
             btnReturn.TabStop = false;
             //Button play values
             btnPlay.BackColor = Color.Snow;
-            btnPlay.Text = "JUGAR";
+            btnPlay.Text = "PLAY";
             btnPlay.Font = superMario256Font4;
             btnPlay.Dock = DockStyle.Fill;
             btnPlay.FlatStyle = FlatStyle.Popup;
@@ -66,7 +66,7 @@ namespace Arkanoid
             btnPlay.TextAlign = ContentAlignment.MiddleCenter;
             btnPlay.TabStop = false;
             //Label values askfornickname
-            lblAskForNickname.Text = "ALIAS";
+            lblAskForNickname.Text = "NICKNAME";
             lblAskForNickname.Font = superMario256Font4;
             lblAskForNickname.Dock = DockStyle.Fill;
             lblAskForNickname.FlatStyle = FlatStyle.Flat;
