@@ -12,7 +12,7 @@ namespace Arkanoid.Views.Forms
             InitializeComponent();
         }
 
-        private void GameOver_Load(object sender, EventArgs e)
+       private void GameOver_Load(object sender, EventArgs e)
         {
             //Maximize window
             Height = ClientSize.Height;
@@ -33,9 +33,9 @@ namespace Arkanoid.Views.Forms
             btnExit.TextAlign = ContentAlignment.MiddleCenter;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       private void btnExit_Click(object sender, EventArgs e)
+       {
+           Application.Exit();
+       }
     }
 }

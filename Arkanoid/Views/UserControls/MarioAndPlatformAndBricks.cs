@@ -227,8 +227,10 @@ namespace Arkanoid.Views.UserControls
                 int lives = Convert.ToInt16(Player.lives.Substring(1)) - 1;
                 if (lives<0 && !finished)
                 {
-                    //You lose
-                    Application.Exit();
+                    finished = true;
+                    GameOver gameOver = new GameOver();
+                    gameOver.Show();
+                    Hide();
                 }
                 else
                 {
