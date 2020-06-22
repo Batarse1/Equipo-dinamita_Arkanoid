@@ -8,8 +8,10 @@ namespace Arkanoid.Views.Forms
 {
     public partial class Congratulations : Form
     {
-        public Congratulations()
+        private Player player = null;
+        public Congratulations(Player _player)
         {
+            player = _player;
             InitializeComponent();
         }
 
@@ -34,14 +36,14 @@ namespace Arkanoid.Views.Forms
             btnExit.TextAlign = ContentAlignment.MiddleCenter;
             //
             LblPlayer.ForeColor = Color.White;
-            LblPlayer.Text = $"Player: {Player.nickname}";
+            LblPlayer.Text = $"Player: {player.nickname}";
             LblPlayer.Font = superMario256Font3;
             LblPlayer.Dock = DockStyle.Fill;
             LblPlayer.FlatStyle = FlatStyle.Flat;
             LblPlayer.Margin = new Padding(0, 0, 0, 0);
             LblPlayer.TextAlign = ContentAlignment.MiddleCenter;
             //
-            var NewScore = (Convert.ToInt32(Player.time.Substring(5))+Convert.ToInt32(Player.score.Substring(6)))*(Convert.ToInt32(Player.lives.Substring(1))+1);
+            var NewScore = (Convert.ToInt32(player.time.Substring(5))+Convert.ToInt32(player.score.Substring(6)))*(Convert.ToInt32(player.lives.Substring(1))+1);
             
             lblScore.ForeColor = Color.White;
             lblScore.Text = $"Score: {NewScore}";

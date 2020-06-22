@@ -88,10 +88,14 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Controllers\ControllerNickname.cs" />
-        <Compile Include="Controllers\ControllerScore.cs" />
+        <Compile Include="Controllers\ControllerPlayer.cs" />
         <Compile Include="Controllers\DatabaseConnection.cs" />
         <Compile Include="Controllers\StaticAttributes.cs" />
+        <Compile Include="Exceptions\EmptyNicknameException.cs" />
+        <Compile Include="Exceptions\IdlePlayerException.cs" />
+        <Compile Include="Exceptions\MaxCharactersException.cs" />
+        <Compile Include="Exceptions\NotStartedException.cs" />
+        <Compile Include="Exceptions\WrongCharactersException.cs" />
         <Compile Include="Models\Brick.cs" />
         <Compile Include="Models\GameData.cs" />
         <Compile Include="Models\Player.cs" />

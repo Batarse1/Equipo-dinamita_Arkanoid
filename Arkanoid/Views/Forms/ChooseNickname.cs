@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using Arkanoid.Exceptions;
 using Arkanoid.Views.Forms;
 
 namespace Arkanoid
@@ -32,9 +33,43 @@ namespace Arkanoid
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            Game game = new Game(txtNickname.Text);
-            game.Show();
-            Hide();
+            try
+            {
+                if (EmptyNicknameException(txtNickname.Text))
+                {
+                    throw new EmptyNicknameException("Text can't be empty");
+                }
+
+                if (MaxCharactersException(txtNickname.Text))
+                {
+                    throw new MaxCharactersException("Text can't have more than 15 characters");
+                }
+
+                if (WrongCharactersException(txtNickname.Text))
+                {
+                    throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
+                }
+
+                Game game = new Game(txtNickname.Text);
+                game.Show();
+                Hide();
+            }
+            catch (EmptyNicknameException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch (MaxCharactersException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch (WrongCharactersException exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error has occurred");
+            }
         }
 
         private void ChooseNickname_Load(object sender, EventArgs e)
@@ -82,6 +117,49 @@ namespace Arkanoid
             //Label values nickname
             txtNickname.Font = superMario256Font4;
             txtNickname.Margin = new Padding(0, 0, 0, 0);
+        }
+
+        private bool EmptyNicknameException(string a)
+        {
+            if (a.Length == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool MaxCharactersException(string a)
+        {
+            if (a.Length > 15)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool WrongCharactersException(string a)
+        {
+            bool WrongCharacter = false;
+            foreach (var c in a)
+            {
+                //En caso de letras minusculas
+                if (96<c && c<123)
+                {
+                }
+                //En caso de letras mayusculas
+                else if (64<c && c<91)
+                {
+                }
+                //En caso de numero
+                else if (47<c && c<58)
+                {
+                }
+                else
+                {
+                    WrongCharacter = true;
+                }
+            }
+            return WrongCharacter;
         }
     }
 }

@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using Arkanoid.Controllers;
+using Arkanoid.Models;
 
 namespace Arkanoid.Views.Forms
 {
     public partial class Leaderboards : Form
-    {
+    {    
+        private Label[] nicknameLabels;
+        private Label[] scoreLabels;
         public Leaderboards()
         {
             InitializeComponent();
@@ -32,6 +37,46 @@ namespace Arkanoid.Views.Forms
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");
             var superMario256Font3 = new Font(pfc.Families[0],Height * 3 / 100); 
+            //label
+            Label lblLeaderboards = new Label();
+            lblLeaderboards.Text = "Leaderboards";
+            lblLeaderboards.Font = superMario256Font3;
+            lblLeaderboards.Dock = DockStyle.Fill;
+            lblLeaderboards.FlatStyle = FlatStyle.Flat;
+            lblLeaderboards.Margin = new Padding(0, 0, 0, 0);
+            lblLeaderboards.TextAlign = ContentAlignment.MiddleCenter;
+            lblLeaderboards.ForeColor = Color.White;
+            tableLayoutShowLeaderboard.Controls.Add(lblLeaderboards, 3,0);
+            tableLayoutShowLeaderboard.SetColumnSpan(lblLeaderboards,2);
+            //label array
+            List<Player> topPlayers = ControllerPlayer.TopPlayer();
+            nicknameLabels = new Label[topPlayers.Count];
+            scoreLabels = new Label[topPlayers.Count];
+            for (var i = 0; i < topPlayers.Count ; i++)
+            {
+                nicknameLabels[i] = new Label();
+                scoreLabels[i] = new Label();
+                
+                nicknameLabels[i].Text = topPlayers[i].nickname;
+                nicknameLabels[i].Font = superMario256Font3;
+                nicknameLabels[i].Dock = DockStyle.Fill;
+                nicknameLabels[i].FlatStyle = FlatStyle.Flat;
+                nicknameLabels[i].Margin = new Padding(0, 0, 0, 0);
+                nicknameLabels[i].TextAlign = ContentAlignment.MiddleLeft;
+                nicknameLabels[i].ForeColor = Color.White;
+
+                
+                scoreLabels[i].Text = topPlayers[i].score;
+                scoreLabels[i].Font = superMario256Font3;
+                scoreLabels[i].Dock = DockStyle.Fill;
+                scoreLabels[i].FlatStyle = FlatStyle.Flat;
+                scoreLabels[i].Margin = new Padding(0, 0, 0, 0);
+                scoreLabels[i].TextAlign = ContentAlignment.MiddleRight;
+                scoreLabels[i].ForeColor = Color.White;
+                
+                tableLayoutShowLeaderboard.Controls.Add(nicknameLabels[i], 3,i+2);
+                tableLayoutShowLeaderboard.Controls.Add(scoreLabels[i], 4,i+2);
+            }
             //Button return values
             btnReturn.BackColor = Color.LemonChiffon;
             btnReturn.Text = "RETURN";
