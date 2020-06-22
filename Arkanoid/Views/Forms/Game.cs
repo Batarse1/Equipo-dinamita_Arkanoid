@@ -28,6 +28,9 @@ namespace Arkanoid.Views.Forms
             Player.lives = "X3";
             Player.time = "Time: 800";
             Player.score = "Score: 0";
+            //Add pictureBoxLives
+            pictureBoxLives.BackgroundImage = Image.FromFile("../../Resources/Life/MarioFace.png");
+            pictureBoxLives.BackgroundImageLayout = ImageLayout.Stretch;
             //Add font
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");
@@ -72,14 +75,17 @@ namespace Arkanoid.Views.Forms
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             //Change labels
-            Player.time = Convert.ToString($"Time: {Convert.ToInt32(lblClockTimer.Text.Substring(5)) - 1}");
-            lblClockTimer.Text = Player.time;
-            lblScore.Text = Player.score;
-            lblLives.Text = Player.lives;
-            //Time out
-            if(Player.time.Equals("Time: 0")){
-                MessageBox.Show("Perdiste...");
-                Application.Exit();
+            if (StaticAttributes.timer)
+            {
+                Player.time = Convert.ToString($"Time: {Convert.ToInt32(lblClockTimer.Text.Substring(5)) - 1}");
+                lblClockTimer.Text = Player.time;
+                lblScore.Text = Player.score;
+                lblLives.Text = Player.lives;
+                //Time out
+                if(Player.time.Equals("Time: 0")){
+                    MessageBox.Show("Perdiste...");
+                    Application.Exit();
+                }
             }
         }
     }

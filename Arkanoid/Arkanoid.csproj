@@ -89,6 +89,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controllers\ControllerNickname.cs" />
+        <Compile Include="Controllers\ControllerScore.cs" />
         <Compile Include="Controllers\DatabaseConnection.cs" />
         <Compile Include="Controllers\StaticAttributes.cs" />
         <Compile Include="Models\Brick.cs" />
@@ -192,13 +193,18 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Resources\Backgrounds\Leaderboards.png" />
+      <Content Include="Resources\Backgrounds\ToadMessage.png" />
       <Content Include="Resources\Backgrounds\Instructions.png" />
+      <Content Include="Resources\Bricks\brokenBrick.png" />
       <Content Include="Resources\Bricks\goldBrick.png" />
       <Content Include="Resources\Bricks\brick.png" />
       <Content Include="Resources\Fonts\SuperMario256.ttf" />
+      <Content Include="Resources\Life\MarioFace.png" />
       <Content Include="Resources\MarioSprites\LeftJumpingMario.png" />
       <Content Include="Resources\MarioSprites\RightJumpingMario.png" />
       <Content Include="Resources\MarioSprites\StandingMario.png" />
+      <Content Include="Resources\Platform\Platform.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -27,6 +27,7 @@ namespace Arkanoid.Views.Forms
             WindowState = FormWindowState.Maximized;
             //Instruccions background
             pictureBoxControls.BackgroundImage = Image.FromFile("../../Resources/Backgrounds/Instructions.png");
+            pictureBoxToadMessage.BackgroundImage = Image.FromFile("../../Resources/Backgrounds/ToadMessage.png");
             //Add font
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");

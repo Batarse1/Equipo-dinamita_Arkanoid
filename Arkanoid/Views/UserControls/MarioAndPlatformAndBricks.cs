@@ -12,6 +12,7 @@ namespace Arkanoid.Views.UserControls
         private Brick[,] bricksMatrix;
         private int number_of_bricks = 0;
         private bool finished = false;
+
         public MarioAndPlatformAndBricks()
         {
             InitializeComponent();
@@ -19,7 +20,6 @@ namespace Arkanoid.Views.UserControls
 
         private void Mario_and_bricks_Load(object sender, EventArgs e)
         {
-            
             //Making bricks
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
@@ -38,12 +38,12 @@ namespace Arkanoid.Views.UserControls
                     if (j == 0)
                     {
                         bricksMatrix[i,j].hits = 2;
-                        bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/goldBrick.png");
+                        bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/brick.png");
                     }
                     else
                     {
                         bricksMatrix[i,j].hits = 1;
-                        bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/brick.png");
+                        bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/brokenBrick.png");
                     }
                     bricksMatrix[i,j].BackgroundImageLayout = ImageLayout.Stretch;
                     bricksMatrix[i,j].Height = brickHeight;
@@ -61,7 +61,7 @@ namespace Arkanoid.Views.UserControls
             int platformWidth = (Width - 2*thickness)*10 / 100;
             int heightDistance = (Height - 2*thickness)*1 /100;
             
-            platform.BackgroundImage = Image.FromFile("../../Resources/Bricks/brick.png");
+            platform.BackgroundImage = Image.FromFile("../../Resources/Platform/Platform.png");
             platform.BackgroundImageLayout = ImageLayout.Stretch;
             platform.Width = platformWidth;
             platform.Height = platformHeight;
@@ -144,7 +144,7 @@ namespace Arkanoid.Views.UserControls
                 case Keys.Space:
                     if (GameData.dirX > 0 && GameData.dirY < 0 && !GameData.gameInitiated)
                     {
-                            
+                        StaticAttributes.timer = true;    
                         mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
                     }
                     GameData.gameInitiated = true;
@@ -190,14 +190,19 @@ namespace Arkanoid.Views.UserControls
                             if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
                             {
                                 bricksMatrix[i,j].hits--;
-                                if (bricksMatrix[i,j].hits == 0)
-                                {
+                                if(bricksMatrix[i,j].hits == 1){
+                                    bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/brokenBrick.png");
+                                }
+                                else{
                                     Controls.Remove(bricksMatrix[i,j]);
                                     bricksMatrix[i, j] = null;
                                     Player.score = Convert.ToString($"Score: {Convert.ToInt32(Player.score.Substring(6)) + 100}");
                                     number_of_bricks--;
                                     if (number_of_bricks == 0)
                                     {
+                                        var NewScore = (Convert.ToInt32(Player.time.Substring(5))+Convert.ToInt32(Player.score.Substring(6)))*(Convert.ToInt32(Player.lives.Substring(1))+1);
+                                        ControllerNickname.AddNickname(Player.nickname);                                        
+                                        ControllerScore.AddScore(Player.nickname, NewScore);
                                         finished = true;
                                         Congratulations congratulations = new Congratulations();
                                         congratulations.Show();
@@ -227,6 +232,8 @@ namespace Arkanoid.Views.UserControls
                 int lives = Convert.ToInt16(Player.lives.Substring(1)) - 1;
                 if (lives<0 && !finished)
                 {
+                    ControllerNickname.AddNickname(Player.nickname);                                        
+                    ControllerScore.AddScore(Player.nickname, 0);
                     finished = true;
                     GameOver gameOver = new GameOver();
                     gameOver.Show();
@@ -235,13 +242,16 @@ namespace Arkanoid.Views.UserControls
                 else
                 {
                     //restart game
-                    int marioHeight = (Height - 2*thickness)*12 /100;
-                    Player.lives = $"x{lives}";
-                    GameData.gameInitiated = false;
-                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
-                    mario.Top = platform.Top-marioHeight;
-                    GameData.dirX = 3;
-                    GameData.dirY = -4;
+                    if (GameData.gameInitiated)
+                    {
+                        int marioHeight = (Height - 2*thickness)*12 /100;
+                        Player.lives = $"x{lives}";
+                        GameData.gameInitiated = false;
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
+                        mario.Top = platform.Top-marioHeight;
+                        GameData.dirX = 3;
+                        GameData.dirY = -4;
+                    }
                 }
             }
             else if (mario.Top < 0)

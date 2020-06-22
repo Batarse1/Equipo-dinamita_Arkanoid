@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using Arkanoid.Models;
 
 namespace Arkanoid.Controllers
 {
@@ -17,5 +19,6 @@ namespace Arkanoid.Controllers
                 MessageBox.Show("Ha ocurrido un error");
             }
         }
+
     }
 }
