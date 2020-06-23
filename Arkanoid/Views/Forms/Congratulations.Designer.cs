@@ -103,6 +103,8 @@ namespace Arkanoid.Views.Forms
             this.ClientSize = new System.Drawing.Size(1066, 554);
             this.Controls.Add(this.tableLayoutCongratulations);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Congratulations";
             this.Text = "Arkanoid by RIBAL";
             this.Load += new System.EventHandler(this.Congratulations_Load);

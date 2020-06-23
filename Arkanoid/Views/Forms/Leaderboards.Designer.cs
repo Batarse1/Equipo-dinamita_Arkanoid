@@ -93,6 +93,7 @@ namespace Arkanoid.Views.Forms
             this.Controls.Add(this.tableLayoutShowLeaderboard);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Leaderboards";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arkanoid by RIBAL";

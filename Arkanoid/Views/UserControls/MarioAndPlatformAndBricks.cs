@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Media;
 using System.Windows.Forms;
 using Arkanoid.Controllers;
 using Arkanoid.Models;
@@ -20,7 +21,7 @@ namespace Arkanoid.Views.UserControls
         }
 
         private void Mario_and_bricks_Load(object sender, EventArgs e)
-        {
+        {        
             //Making bricks
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
@@ -193,6 +194,7 @@ namespace Arkanoid.Views.UserControls
                                 bricksMatrix[i,j].hits--;
                                 if(bricksMatrix[i,j].hits == 1){
                                     bricksMatrix[i,j].BackgroundImage = Image.FromFile("../../Resources/Bricks/brokenBrick.png");
+                                    player.score = Convert.ToString($"Score: {Convert.ToInt32(player.score.Substring(6)) + 100}");
                                 }
                                 else{
                                     Controls.Remove(bricksMatrix[i,j]);
@@ -201,10 +203,12 @@ namespace Arkanoid.Views.UserControls
                                     number_of_bricks--;
                                     if (number_of_bricks == 0)
                                     {
-                                        var NewScore = (Convert.ToInt32(player.time.Substring(5))+Convert.ToInt32(player.score.Substring(6)))*(Convert.ToInt32(player.lives.Substring(1))+1);
-                                        ControllerPlayer.AddNickname(player.nickname);                                        
-                                        ControllerPlayer.AddScore(player.nickname, NewScore);
                                         finished = true;
+                                        var NewScore = (Convert.ToInt32(player.time.Substring(5))+Convert.ToInt32(player.score.Substring(6)))*(Convert.ToInt32(player.lives.Substring(1))+1);
+                                        if(!StaticAttributes.nicknameRepeated){
+                                            ControllerPlayer.AddNickname(player.nickname);                                                                                                                        
+                                        }
+                                        ControllerPlayer.AddScore(player.nickname, NewScore);
                                         Congratulations congratulations = new Congratulations(player);
                                         congratulations.Show();
                                         Hide();
@@ -233,9 +237,12 @@ namespace Arkanoid.Views.UserControls
                 int lives = Convert.ToInt16(player.lives.Substring(1)) - 1;
                 if (lives<0 && !finished)
                 {
-                    ControllerPlayer.AddNickname(player.nickname);                                        
-                    ControllerPlayer.AddScore(player.nickname, 0);
                     finished = true;
+                    if (!StaticAttributes.nicknameRepeated)
+                    {
+                        ControllerPlayer.AddNickname(player.nickname);                                                                
+                    }
+                    ControllerPlayer.AddScore(player.nickname, 0);
                     GameOver gameOver = new GameOver();
                     gameOver.Show();
                     Hide();

@@ -20,5 +20,10 @@
             this.nickname = nickname;
             this.score = score;
         }
+
+        public Player(string nickname)
+        {
+            this.nickname = nickname;
+        }
     }
 }

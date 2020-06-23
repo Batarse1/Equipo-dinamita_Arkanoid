@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using Arkanoid.Controllers;
 using Arkanoid.Exceptions;
 using Arkanoid.Views.Forms;
 
@@ -50,6 +51,13 @@ namespace Arkanoid
                     throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
                 }
 
+                foreach (var player in ControllerPlayer.NicknameList())
+                {
+                    if (player.nickname == txtNickname.Text)
+                    {
+                        StaticAttributes.nicknameRepeated = true;
+                    }
+                }
                 Game game = new Game(txtNickname.Text);
                 game.Show();
                 Hide();

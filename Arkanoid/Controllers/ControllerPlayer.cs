@@ -50,5 +50,23 @@ namespace Arkanoid.Controllers
             }
             return topPlayers;
         }
+        
+        public static List<Player> NicknameList()
+        {
+            var nicknameList = new List<Player>();
+            try
+            {
+                DataTable dt = DatabaseConnection.ExecuteQuery("SELECT pl.nickname FROM PLAYER pl");
+                foreach (DataRow dr in dt.Rows)
+                {
+                    nicknameList.Add(new Player(dr[0].ToString()));
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
+            return nicknameList;
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace Arkanoid.Views.Forms
             InitializeComponent();
             //Music
             music.SoundLocation = "overworld-theme-super-mario-world.wav";
-            if (StaticAttributes.music)
+            if (!StaticAttributes.music)
             {
                 music.PlayLooping();
                 StaticAttributes.music = true;

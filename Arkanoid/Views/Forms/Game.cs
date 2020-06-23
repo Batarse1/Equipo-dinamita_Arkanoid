@@ -122,13 +122,13 @@ namespace Arkanoid.Views.Forms
         
         private bool IdlePlayerException()
         {
-            if (StaticAttributes.oldlocation == StaticAttributes.location)
+            if (StaticAttributes.oldLocation == StaticAttributes.location)
             {
                 idleCont++;
             }
             else
             {
-                StaticAttributes.oldlocation = StaticAttributes.location;
+                StaticAttributes.oldLocation = StaticAttributes.location;
                 idleCont=0;
             }
             if (idleCont != 20) return false;
