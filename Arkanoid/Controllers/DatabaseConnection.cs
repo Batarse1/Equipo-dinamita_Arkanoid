@@ -6,17 +6,12 @@ namespace Arkanoid.Controllers
 {
     public static class DatabaseConnection
     {
-        private static string host = "ec2-34-232-147-86.compute-1.amazonaws.com",
-            dataBase = "dfpsc1c2f4adr0",
-            userID = "pjhyomijchhxwh",
-            Password = "20a71ac26aeba3d7d34d4f634466805b544eebc3a1c4da79407a0e48e177d2cb";
-
-
-        private static string sConnection =
-            $"Server={host};Port=5432;User Id={userID};Password={Password};Database={dataBase};" +
-            "sslmode=Require;Trust Server Certificate=true ";
-
-
+        private static string sConnection = "Server=127.0.0.1;" +
+                                        "Port=5432;" +
+                                        "UserId=postgres;" +
+                                        "Password=Fdfb69b0*;" +
+                                        "Database=POO project;";
+        
         public static DataTable ExecuteQuery(string query)
         {
             NpgsqlConnection connection = new NpgsqlConnection(sConnection);

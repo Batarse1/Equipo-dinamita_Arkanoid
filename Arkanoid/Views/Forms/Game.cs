@@ -145,8 +145,12 @@ namespace Arkanoid.Views.Forms
         private bool NotStartedException()
         {
             notStart++;
+            if (notStart == 20)
+            {
+                notStart = 0;
+                SendKeys.Send("{ESC}");
+            }
             if (notStart != 15) return false;
-            notStart = 0;
             return true;
         }
         private bool IdlePlayerException()
@@ -160,8 +164,13 @@ namespace Arkanoid.Views.Forms
                 StaticAttributes.oldLocation = StaticAttributes.location;
                 idleCont=0;
             }
-            if (idleCont != 60) return false;
-            idleCont = 0;
+
+            if (idleCont == 35)
+            {
+                idleCont = 0;
+                SendKeys.Send("{ESC}");
+            }
+            if (idleCont != 30) return false;
             return true;
         }
     }

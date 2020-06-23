@@ -51,11 +51,12 @@ namespace Arkanoid
                     throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
                 }
                 //Posible error
+                string aux = txtNickname.Text;
                 try
                 {
                     foreach (var player in ControllerPlayer.NicknameList())
                     {
-                        if (player.nickname.Equals(txtNickname.Text))
+                        if (player.nickname.Equals(aux))
                         {
                             StaticAttributes.nicknameRepeated = true;
                         }
@@ -65,7 +66,7 @@ namespace Arkanoid
                 {
                     MessageBox.Show("error");
                 }
-                Game game = new Game(txtNickname.Text);
+                Game game = new Game(aux);
                 game.Show();
                 Hide();
             }

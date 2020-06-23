@@ -60,10 +60,10 @@ namespace Arkanoid.Views.UserControls
                 }
             }
             //Making star
-            int StarWidth = 60;
-            int StarHeight = 60;
+            int StarWidth = (Height - 2*thickness)*10 /100;;
+            int StarHeight = StarWidth;
             int StarLeft = 0;
-            int StarTop = (((Height - 2 * thickness) * 40) / 100);
+            int StarTop = 0;
             star.BackgroundImage = Image.FromFile("../../Resources/Star/Star.png");
             star.BackgroundImageLayout = ImageLayout.Stretch;
             star.Width = StarWidth;
@@ -202,10 +202,6 @@ namespace Arkanoid.Views.UserControls
                     {
                         if(bricksMatrix[i,j] != null)
                         {
-                            if(star.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
-                            {
-                                Star.dirY *= -1;
-                            }
                             if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
                             {
                                 bricksMatrix[i,j].hits--;
@@ -243,7 +239,7 @@ namespace Arkanoid.Views.UserControls
         private void MarioTimer_Tick_1(object sender, EventArgs e)
         {
             int thickness = SystemInformation.BorderSize.Width;
-            if(Convert.ToInt32(player.time.Substring(5)) == 795)
+            if(Convert.ToInt32(player.time.Substring(5)) == 500)
             {
                 Star.starInitiated = true;
                 Controls.Add(star);
@@ -334,11 +330,11 @@ namespace Arkanoid.Views.UserControls
             }
             else if(star.Top<0)
             {
-                Star.dirY += -1;
+                Star.dirY *= -1;
             }
             else if(star.Left < 0 || star.Right > Width - 2 * thickness)
             {
-                Star.dirX += -1;
+                Star.dirX *= -1;
             }
             else if (star.Bounds.IntersectsWith(platform.Bounds))
             {
