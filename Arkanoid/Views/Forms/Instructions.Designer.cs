@@ -97,7 +97,6 @@ namespace Arkanoid.Views.Forms
             // 
             // pictureBoxPeachMessage
             // 
-            this.pictureBoxPeachMessage.BackgroundImage = ((System.Drawing.Image) (resources.GetObject("pictureBoxPeachMessage.BackgroundImage")));
             this.pictureBoxPeachMessage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxPeachMessage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBoxPeachMessage.Location = new System.Drawing.Point(398, 27);
@@ -136,6 +135,7 @@ namespace Arkanoid.Views.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arkanoid by RIBAL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Instructions_FormClosing);
             this.Load += new System.EventHandler(this.Instructions_Load);
             this.tableLayoutPanelInstructions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxToadMessage)).EndInit();

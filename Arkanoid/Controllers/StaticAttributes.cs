@@ -9,5 +9,6 @@ namespace Arkanoid.Controllers
         public static int oldLocation = 0;
         public static bool timer = false;
         public static bool nicknameRepeated = false;
+        public static bool finished = false;
     }
 }

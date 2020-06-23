@@ -21,7 +21,6 @@ namespace Arkanoid.Views.Forms
             //Add font
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");
-            var superMario256Font4 = new Font(pfc.Families[0],Height * 4 / 100); 
             var superMario256Font3 = new Font(pfc.Families[0],Height * 3 / 100); 
             //Button Menu values
             btnExit.BackColor = Color.LemonChiffon;
@@ -34,6 +33,11 @@ namespace Arkanoid.Views.Forms
         }
 
        private void btnExit_Click(object sender, EventArgs e)
+       {
+           Application.Exit();
+       }
+
+       private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
        {
            Application.Exit();
        }

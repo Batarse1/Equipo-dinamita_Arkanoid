@@ -59,5 +59,10 @@ namespace Arkanoid.Views.Forms
         {
             Application.Exit();
         }
+
+        private void Congratulations_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

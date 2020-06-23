@@ -28,6 +28,7 @@ namespace Arkanoid.Views.Forms
             //Instruccions background
             pictureBoxControls.BackgroundImage = Image.FromFile("../../Resources/Backgrounds/Instructions.png");
             pictureBoxToadMessage.BackgroundImage = Image.FromFile("../../Resources/Backgrounds/ToadMessage.png");
+            pictureBoxPeachMessage.BackgroundImage = Image.FromFile("../../Resources/Backgrounds/PeachMessage.png");
             //Add font
             var pfc = new PrivateFontCollection();
             pfc.AddFontFile("../../Resources/Fonts/SuperMario256.ttf");
@@ -41,6 +42,11 @@ namespace Arkanoid.Views.Forms
             btnReturn.Margin = new Padding(11, 11, 11, 11);
             btnReturn.TextAlign = ContentAlignment.MiddleCenter;
             btnReturn.TabStop = false;
+        }
+
+        private void Instructions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

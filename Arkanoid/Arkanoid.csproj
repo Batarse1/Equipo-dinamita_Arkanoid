@@ -99,6 +99,7 @@
         <Compile Include="Models\Brick.cs" />
         <Compile Include="Models\GameData.cs" />
         <Compile Include="Models\Player.cs" />
+        <Compile Include="Models\Star.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Views\Forms\ChooseNickname.cs">
@@ -198,17 +199,20 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\Backgrounds\Leaderboards.png" />
+      <Content Include="Resources\Backgrounds\PeachMessage.png" />
       <Content Include="Resources\Backgrounds\ToadMessage.png" />
       <Content Include="Resources\Backgrounds\Instructions.png" />
       <Content Include="Resources\Bricks\brokenBrick.png" />
-      <Content Include="Resources\Bricks\goldBrick.png" />
       <Content Include="Resources\Bricks\brick.png" />
       <Content Include="Resources\Fonts\SuperMario256.ttf" />
       <Content Include="Resources\Life\MarioFace.png" />
       <Content Include="Resources\MarioSprites\LeftJumpingMario.png" />
+      <Content Include="Resources\MarioSprites\LeftJumpingMarioStar.png" />
       <Content Include="Resources\MarioSprites\RightJumpingMario.png" />
+      <Content Include="Resources\MarioSprites\RightJumpingMarioStar.png" />
       <Content Include="Resources\MarioSprites\StandingMario.png" />
       <Content Include="Resources\Platform\Platform.png" />
+      <Content Include="Resources\Star\Star.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

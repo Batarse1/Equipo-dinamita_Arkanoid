@@ -50,13 +50,20 @@ namespace Arkanoid
                 {
                     throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
                 }
-
-                foreach (var player in ControllerPlayer.NicknameList())
+                //Posible error
+                try
                 {
-                    if (player.nickname == txtNickname.Text)
+                    foreach (var player in ControllerPlayer.NicknameList())
                     {
-                        StaticAttributes.nicknameRepeated = true;
+                        if (player.nickname.Equals(txtNickname.Text))
+                        {
+                            StaticAttributes.nicknameRepeated = true;
+                        }
                     }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("error");
                 }
                 Game game = new Game(txtNickname.Text);
                 game.Show();
@@ -160,6 +167,9 @@ namespace Arkanoid
                 }
                 //En caso de numero
                 else if (47<c && c<58)
+                {
+                }
+                else if (c == ' ')
                 {
                 }
                 else

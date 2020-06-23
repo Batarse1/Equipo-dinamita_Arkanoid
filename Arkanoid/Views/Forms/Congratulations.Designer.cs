@@ -107,6 +107,7 @@ namespace Arkanoid.Views.Forms
             this.MaximizeBox = false;
             this.Name = "Congratulations";
             this.Text = "Arkanoid by RIBAL";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Congratulations_FormClosing);
             this.Load += new System.EventHandler(this.Congratulations_Load);
             this.tableLayoutCongratulations.ResumeLayout(false);
             this.ResumeLayout(false);

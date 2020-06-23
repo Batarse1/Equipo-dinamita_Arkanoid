@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Media;
 using System.Windows.Forms;
 using Arkanoid.Controllers;
 using Arkanoid.Exceptions;
@@ -11,12 +12,14 @@ namespace Arkanoid.Views.Forms
 {
     public partial class Game : Form
     {
+        private SoundPlayer music = new SoundPlayer();
         private Player player = null;
         private int idleCont = 0;
         private int notStart = 0;
         public Game(string nickname)
         {
             InitializeComponent();
+            music.SoundLocation = "overworld-theme-super-mario-world.wav";
             //Add player values
             player = new Player(nickname,"X3","Time: 800","Score: 0");
             //Maximize window
@@ -75,6 +78,28 @@ namespace Arkanoid.Views.Forms
 
         private void clockTimer_Tick(object sender, EventArgs e)
         {
+            if (Star.time != 0)
+            {
+                Star.time--;
+                if(Star.time == 0)
+                {
+                    if(GameData.dirX>0){
+                        GameData.dirX = 3; 
+                    }
+                    else{
+                        GameData.dirX = -3;
+                    }
+                    if (GameData.dirY > 0)
+                    {
+                        GameData.dirY = 4; 
+                    }
+                    else{
+                        GameData.dirY = -4;
+                    }
+                    music.PlayLooping();
+                    Star.loseStar = true;
+                }
+            }
             if (StaticAttributes.timer)
             {
                 player.time = Convert.ToString($"Time: {Convert.ToInt32(lblClockTimer.Text.Substring(5)) - 1}");
@@ -83,8 +108,15 @@ namespace Arkanoid.Views.Forms
                 lblLives.Text = player.lives;
                 //Time out
                 if(player.time.Equals("Time: 0")){
-                    MessageBox.Show("Perdiste...");
-                    Application.Exit();
+                    StaticAttributes.finished = true;
+                    if (!StaticAttributes.nicknameRepeated)
+                    {
+                        ControllerPlayer.AddNickname(player.nickname);                                                                
+                    }
+                    ControllerPlayer.AddScore(player.nickname, 0);
+                    GameOver gameOver = new GameOver();
+                    gameOver.Show();
+                    Hide();
                 }
             }
             else
@@ -93,12 +125,11 @@ namespace Arkanoid.Views.Forms
                 {
                     if (NotStartedException())
                     {
-                        throw new NotStartedException("DALE ESPACIO CEROTE");
+                        throw new NotStartedException("Press space to start");
                     }
-
                     if (IdlePlayerException())
                     {
-                        throw new IdlePlayerException("Afk");
+                        throw new IdlePlayerException("IDLE player detected");
                     }
                 }
                 catch (NotStartedException exc)
@@ -111,15 +142,13 @@ namespace Arkanoid.Views.Forms
                 }
             }
         }
-
         private bool NotStartedException()
         {
             notStart++;
-            if (notStart != 10) return false;
+            if (notStart != 15) return false;
             notStart = 0;
             return true;
         }
-        
         private bool IdlePlayerException()
         {
             if (StaticAttributes.oldLocation == StaticAttributes.location)
@@ -131,7 +160,7 @@ namespace Arkanoid.Views.Forms
                 StaticAttributes.oldLocation = StaticAttributes.location;
                 idleCont=0;
             }
-            if (idleCont != 20) return false;
+            if (idleCont != 60) return false;
             idleCont = 0;
             return true;
         }

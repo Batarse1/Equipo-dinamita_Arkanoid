@@ -85,6 +85,7 @@ namespace Arkanoid.Views.Forms
             this.MaximizeBox = false;
             this.Name = "GameOver";
             this.Text = "Arkanoid by RIBAL";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOver_FormClosing);
             this.Load += new System.EventHandler(this.GameOver_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

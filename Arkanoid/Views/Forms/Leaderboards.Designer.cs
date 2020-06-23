@@ -98,6 +98,7 @@ namespace Arkanoid.Views.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arkanoid by RIBAL";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Leaderboards_FormClosing);
             this.Load += new System.EventHandler(this.Leaderboards_Load);
             this.tableLayoutShowLeaderboard.ResumeLayout(false);
             this.ResumeLayout(false);

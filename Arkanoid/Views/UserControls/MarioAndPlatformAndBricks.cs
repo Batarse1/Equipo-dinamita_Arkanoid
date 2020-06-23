@@ -10,9 +10,10 @@ namespace Arkanoid.Views.UserControls
 {
     public partial class MarioAndPlatformAndBricks : UserControl
     {
+        private SoundPlayer starMusic = new SoundPlayer();
         private Brick[,] bricksMatrix;
+        private PictureBox star = new PictureBox();
         private int number_of_bricks = 0;
-        private bool finished = false;
         private Player player;
         public MarioAndPlatformAndBricks(Player _player)
         {
@@ -23,6 +24,7 @@ namespace Arkanoid.Views.UserControls
         private void Mario_and_bricks_Load(object sender, EventArgs e)
         {        
             //Making bricks
+            starMusic.SoundLocation = "super-mario-bros-nes-music-star-theme-cut.wav";
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 4;
@@ -57,7 +59,18 @@ namespace Arkanoid.Views.UserControls
                     Controls.Add(bricksMatrix[i,j]);
                 }
             }
-            
+            //Making star
+            int StarWidth = 60;
+            int StarHeight = 60;
+            int StarLeft = 0;
+            int StarTop = (((Height - 2 * thickness) * 40) / 100);
+            star.BackgroundImage = Image.FromFile("../../Resources/Star/Star.png");
+            star.BackgroundImageLayout = ImageLayout.Stretch;
+            star.Width = StarWidth;
+            star.Height = StarHeight;
+            star.Left = StarLeft;
+            star.Top = StarTop;
+
             //Making platform
             int platformHeight = (Height - 2*thickness)*3 /100;
             int platformWidth = (Width - 2*thickness)*10 / 100;
@@ -179,7 +192,7 @@ namespace Arkanoid.Views.UserControls
         private void Collider2D_Tick(object sender, EventArgs e)
         {
             //Bricks collider
-            if (GameData.gameInitiated)
+            if (GameData.gameInitiated || Star.starInitiated)
             {
                 int xAxis = 10;
                 int yAxis = 4;
@@ -189,6 +202,10 @@ namespace Arkanoid.Views.UserControls
                     {
                         if(bricksMatrix[i,j] != null)
                         {
+                            if(star.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
+                            {
+                                Star.dirY *= -1;
+                            }
                             if (mario.Bounds.IntersectsWith(bricksMatrix[i,j].Bounds))
                             {
                                 bricksMatrix[i,j].hits--;
@@ -203,7 +220,7 @@ namespace Arkanoid.Views.UserControls
                                     number_of_bricks--;
                                     if (number_of_bricks == 0)
                                     {
-                                        finished = true;
+                                        StaticAttributes.finished = true;
                                         var NewScore = (Convert.ToInt32(player.time.Substring(5))+Convert.ToInt32(player.score.Substring(6)))*(Convert.ToInt32(player.lives.Substring(1))+1);
                                         if(!StaticAttributes.nicknameRepeated){
                                             ControllerPlayer.AddNickname(player.nickname);                                                                                                                        
@@ -226,18 +243,28 @@ namespace Arkanoid.Views.UserControls
         private void MarioTimer_Tick_1(object sender, EventArgs e)
         {
             int thickness = SystemInformation.BorderSize.Width;
+            if(Convert.ToInt32(player.time.Substring(5)) == 795)
+            {
+                Star.starInitiated = true;
+                Controls.Add(star);
+            }
             if (GameData.gameInitiated)
             {
                 //Movement of Mario
                 mario.Left += GameData.dirX;
                 mario.Top += GameData.dirY;
             }
+            if (Star.starInitiated)
+            {
+                star.Left += Star.dirX;
+                star.Top += Star.dirY;
+            }
             if (mario.Bottom > Height)
             {               
                 int lives = Convert.ToInt16(player.lives.Substring(1)) - 1;
-                if (lives<0 && !finished)
+                if (lives<0 && !StaticAttributes.finished)
                 {
-                    finished = true;
+                    StaticAttributes.finished = true;
                     if (!StaticAttributes.nicknameRepeated)
                     {
                         ControllerPlayer.AddNickname(player.nickname);                                                                
@@ -250,6 +277,11 @@ namespace Arkanoid.Views.UserControls
                 else
                 {
                     //restart game
+                    if (Star.time != 0)
+                    {
+                        starMusic.Stop();
+                        Star.time =1;
+                    }
                     if (GameData.gameInitiated)
                     {
                         int marioHeight = (Height - 2*thickness)*12 /100;
@@ -265,8 +297,7 @@ namespace Arkanoid.Views.UserControls
             else if (mario.Top < 0)
             {
                 //Rebound with top screen
-                GameData.dirY *= -1; 
-                return;
+                GameData.dirY *= -1;
             }
             else if (mario.Left < 0 || mario.Right > Width - 2 * thickness)
             {
@@ -274,19 +305,75 @@ namespace Arkanoid.Views.UserControls
                 GameData.dirX *= -1;
                 if (GameData.dirX > 0)
                 {
-                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
+                    if(Star.time!=0){
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMarioStar.png");
+                    }
+                    else{
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");
+                    }
                 }
                 else
                 {
-                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMario.png");
+                    if(Star.time!=0){
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMarioStar.png");
+                    }
+                    else
+                    {
+                        mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMario.png");
+                    }
                 }
-                return;
             }
             else if (mario.Bounds.IntersectsWith(platform.Bounds))
             {
                 //Rebound with platform
                 GameData.dirY *= -1;
-                return;
+            }
+            if (star.Bottom > Height)
+            {
+                star.Dispose();
+            }
+            else if(star.Top<0)
+            {
+                Star.dirY += -1;
+            }
+            else if(star.Left < 0 || star.Right > Width - 2 * thickness)
+            {
+                Star.dirX += -1;
+            }
+            else if (star.Bounds.IntersectsWith(platform.Bounds))
+            {
+                Star.dirY *= -1;
+            }
+            if (mario.Bounds.IntersectsWith(star.Bounds) && GameData.gameInitiated && Star.starInitiated)
+            {
+                starMusic.Play();
+                Star.time=12;
+                if(GameData.dirX>0)
+                {
+                    GameData.dirX = 10;                        
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMarioStar.png");                
+                }
+                else{
+                    GameData.dirX = -10;
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMarioStar.png");
+                }
+                if(GameData.dirY>0){
+                    GameData.dirY = 10;
+                }
+                else{
+                    GameData.dirY = -10;
+                }
+                star.Dispose();
+            }
+            if(Star.loseStar){
+                if(GameData.dirX>0)
+                {                      
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMario.png");                
+                }
+                else{
+                    mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMario.png");
+                }
+                Star.loseStar = false;
             }
         }
     }

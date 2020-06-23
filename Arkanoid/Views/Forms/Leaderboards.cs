@@ -87,5 +87,10 @@ namespace Arkanoid.Views.Forms
             btnReturn.TextAlign = ContentAlignment.MiddleCenter;
             btnReturn.TabStop = false;
         }
+
+        private void Leaderboards_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
