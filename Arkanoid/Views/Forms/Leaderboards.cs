@@ -10,13 +10,15 @@ namespace Arkanoid.Views.Forms
 {
     public partial class Leaderboards : Form
     {    
+        //Initialazing the Label arrays
         private Label[] nicknameLabels;
         private Label[] scoreLabels;
         public Leaderboards()
         {
             InitializeComponent();
         }
-
+        
+        //A button that takes you back to the main menu
         private void btnReturn_Click(object sender, EventArgs e)
         {
             StartMenu startMenu = new StartMenu();
@@ -88,6 +90,7 @@ namespace Arkanoid.Views.Forms
             btnReturn.TabStop = false;
         }
 
+        //When the form is closed abruptly, so It can close properly
         private void Leaderboards_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using Arkanoid.Models;
 
@@ -8,6 +9,7 @@ namespace Arkanoid.Controllers
 {
     public static class ControllerPlayer
     {
+        //Adds nickname
         public static void AddNickname(string nickname)
         {
             try
@@ -20,6 +22,8 @@ namespace Arkanoid.Controllers
                 MessageBox.Show("An error has occurred");
             }
         }
+        
+        //Adds score
         public static void AddScore(string nickname, int score)
         {
             try
@@ -33,6 +37,7 @@ namespace Arkanoid.Controllers
             }
         }
 
+        //Gets the top players
         public static List<Player> TopPlayer()
         {
             var topPlayers = new List<Player>();
@@ -51,6 +56,7 @@ namespace Arkanoid.Controllers
             return topPlayers;
         }
         
+        //Gets all the nicknames on the database
         public static List<Player> NicknameList()
         {
             var nicknameList = new List<Player>();

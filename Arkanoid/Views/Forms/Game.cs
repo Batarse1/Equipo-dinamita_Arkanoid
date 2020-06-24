@@ -62,6 +62,7 @@ namespace Arkanoid.Views.Forms
 
         public void tableLayoutPanelGame_MouseMove(object sender, MouseEventArgs e)
         {
+            //Area in which the mouse can be detected
             if(e.Y>(tableLayoutPanelGame.RowStyles[0].Height*tableLayoutPanelGame.Height)/100){
                 StaticAttributes.location = e.X;
             }
@@ -73,9 +74,12 @@ namespace Arkanoid.Views.Forms
         }
         private void clockTimer_Tick(object sender, EventArgs e)
         {
+            //if the star has been aquired
             if (Star.time != 0)
             {
                 Star.time--;
+                
+                //When the star runs out
                 if(Star.time == 0)
                 {
                     if(GameData.dirX>0){
@@ -95,6 +99,8 @@ namespace Arkanoid.Views.Forms
                     Star.loseStar = true;
                 }
             }
+            
+            //When the time has been Initiated
             if (StaticAttributes.timer)
             {
                 player.time = Convert.ToString($"Time: {Convert.ToInt32(lblClockTimer.Text.Substring(5)) - 1}");
@@ -114,6 +120,7 @@ namespace Arkanoid.Views.Forms
                     Hide();
                 }
             }
+            //When the time has NOT been initiated
             else
             {
                 try
@@ -137,6 +144,7 @@ namespace Arkanoid.Views.Forms
                 }
             }
         }
+        //This exception appears when the user has not pressed the start button yet and 15 seconds have passed
         private bool NotStartedException()
         {
             notStart++;
@@ -148,6 +156,8 @@ namespace Arkanoid.Views.Forms
             if (notStart != 15) return false;
             return true;
         }
+        
+        //This exception appears when the user has not moved yet and 15 seconds have passed
         private bool IdlePlayerException()
         {
             if (StaticAttributes.oldLocation == StaticAttributes.location)

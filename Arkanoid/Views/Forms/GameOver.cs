@@ -32,11 +32,13 @@ namespace Arkanoid.Views.Forms
             btnExit.TextAlign = ContentAlignment.MiddleCenter;
         }
 
+       //The button that closes the application
        private void btnExit_Click(object sender, EventArgs e)
        {
            Application.Exit();
        }
-
+        
+       //When the form is closed abruptly, so It can close properly
        private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
        {
            Application.Exit();
