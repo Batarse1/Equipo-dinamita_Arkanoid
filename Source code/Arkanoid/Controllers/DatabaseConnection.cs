@@ -9,7 +9,7 @@ namespace Arkanoid.Controllers
         private static string sConnection = "Server=127.0.0.1;" +
                                         "Port=5432;" +
                                         "UserId=postgres;" +
-                                        "Password=carro0707;" +
+                                        "Password=uca;" +
                                         "Database=Proyecto;";
         
         public static DataTable ExecuteQuery(string query)
