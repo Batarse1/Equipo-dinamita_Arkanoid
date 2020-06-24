@@ -75,6 +75,7 @@ namespace Arkanoid.Views.Forms
         //Play button
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            //This method shows the ChooseNickname form, when the play button is clicked
             ChooseNickname chooseNickname = new ChooseNickname();
             chooseNickname.Show();
             Hide();
@@ -82,6 +83,7 @@ namespace Arkanoid.Views.Forms
         //Leaderboards button
         private void btnLeaderboards_Click(object sender, EventArgs e)
         {
+            //This method shows the leaderboard form, when the leaderboard button is clicked
             Leaderboards leaderboards = new Leaderboards();
             leaderboards.Show();
             Hide();
@@ -89,6 +91,7 @@ namespace Arkanoid.Views.Forms
         //Instructions button
         private void btnInstructions_Click(object sender, EventArgs e)
         {
+            //This section shows the instruction form, when the instruction button is clicked
             Instructions instructions = new Instructions();
             instructions.Show();
             Hide();
@@ -96,11 +99,13 @@ namespace Arkanoid.Views.Forms
         //Exit button
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //this button closes the game when this button is clicking it 
             Application.Exit();
         }
         //Exit
         private void StartMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //This section closes all the forms and exit the game by clicking in X on the Windows form
             Application.Exit();
         }
     }

@@ -20,13 +20,17 @@ namespace Arkanoid
             lblNickname.Text=txtNickname.Text;
         }
 
+        //Exit 
         private void ChooseNickname_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //this button closes the game when this button is clicking it 
             Application.Exit();
         }
 
+        //Exit button
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            //This section closes all the forms and exit the game by clicking in X on the Windows form
             StartMenu startMenu = new StartMenu();
             startMenu.Show();
             Hide();
@@ -38,16 +42,19 @@ namespace Arkanoid
             {
                 if (EmptyNicknameException(txtNickname.Text))
                 {
+                    //Verifys that text added in the textbox is not empty
                     throw new EmptyNicknameException("Text can't be empty");
                 }
 
                 if (MaxCharactersException(txtNickname.Text))
                 {
+                    //Verifys that text added in the textbox is not more than 15 characters
                     throw new MaxCharactersException("Text can't have more than 15 characters");
                 }
 
                 if (WrongCharactersException(txtNickname.Text))
                 {
+                    //Verifys that text added in the textbox is not a symbol
                     throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
                 }
                 string aux = txtNickname.Text;
@@ -136,6 +143,7 @@ namespace Arkanoid
 
         private bool EmptyNicknameException(string a)
         {
+            //Boolean method that verifys text in textbox is not 0
             if (a.Length == 0)
             {
                 return true;
@@ -145,6 +153,7 @@ namespace Arkanoid
 
         private bool MaxCharactersException(string a)
         {
+            //Boolean method that verifys text in textbox is not more than 15 characters
             if (a.Length > 15)
             {
                 return true;
@@ -154,6 +163,7 @@ namespace Arkanoid
 
         private bool WrongCharactersException(string a)
         {
+            //Boolean method that verifys text in textbox is not a symbol
             bool WrongCharacter = false;
             foreach (var c in a)
             {

@@ -28,6 +28,7 @@ namespace Arkanoid.Views.UserControls
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 4;
+            //Setting coordenades for bricks
             number_of_bricks = xAxis * yAxis;
             int brickHeight = ((((Height - 2*thickness)*40)/100)/yAxis);
             int brickWidth = (Width - 2*thickness) / xAxis;
@@ -64,6 +65,7 @@ namespace Arkanoid.Views.UserControls
             int StarHeight = StarWidth;
             int StarLeft = 0;
             int StarTop = 0;
+            //Star Shown
             star.BackgroundImage = Image.FromFile("../../Resources/Star/Star.png");
             star.BackgroundImageLayout = ImageLayout.Stretch;
             star.Width = StarWidth;
@@ -76,6 +78,7 @@ namespace Arkanoid.Views.UserControls
             int platformWidth = (Width - 2*thickness)*10 / 100;
             int heightDistance = (Height - 2*thickness)*1 /100;
             
+            //Platform shown
             platform.BackgroundImage = Image.FromFile("../../Resources/Platform/Platform.png");
             platform.BackgroundImageLayout = ImageLayout.Stretch;
             platform.Width = platformWidth;
@@ -88,6 +91,7 @@ namespace Arkanoid.Views.UserControls
             int marioHeight = (Height - 2*thickness)*12 /100;
             int marioWidth = (Width - 2*thickness)*3 / 100;
           
+            //mario shown
             mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/StandingMario.png");
             mario.BackgroundImageLayout = ImageLayout.Stretch;
             mario.Width = marioWidth;
@@ -238,6 +242,7 @@ namespace Arkanoid.Views.UserControls
 
         private void MarioTimer_Tick_1(object sender, EventArgs e)
         {
+            //movement of mario in timer
             int thickness = SystemInformation.BorderSize.Width;
             if(Convert.ToInt32(player.time.Substring(5)) == 700)
             {

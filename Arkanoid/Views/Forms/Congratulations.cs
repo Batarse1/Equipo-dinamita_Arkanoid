@@ -34,7 +34,7 @@ namespace Arkanoid.Views.Forms
             btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Margin = new Padding(11, 11, 11, 11);
             btnExit.TextAlign = ContentAlignment.MiddleCenter;
-            //
+            //label values
             LblPlayer.ForeColor = Color.White;
             LblPlayer.Text = $"Player: {player.nickname}";
             LblPlayer.Font = superMario256Font3;
@@ -42,7 +42,7 @@ namespace Arkanoid.Views.Forms
             LblPlayer.FlatStyle = FlatStyle.Flat;
             LblPlayer.Margin = new Padding(0, 0, 0, 0);
             LblPlayer.TextAlign = ContentAlignment.MiddleCenter;
-            //
+            //label show score
             var NewScore = (Convert.ToInt32(player.time.Substring(5))+Convert.ToInt32(player.score.Substring(6)))*(Convert.ToInt32(player.lives.Substring(1))+1);
             
             lblScore.ForeColor = Color.White;
@@ -54,14 +54,18 @@ namespace Arkanoid.Views.Forms
             lblScore.TextAlign = ContentAlignment.MiddleCenter;           
             
         }
-
+        
+        //Exit button
         private void btnExit_Click(object sender, EventArgs e)
         {
+            //this button closes the game when this button is clicking it 
             Application.Exit();
         }
-
+        
+        //Exit 
         private void Congratulations_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //This section closes all the forms and exit the game by clicking in X on the Windows form
             Application.Exit();
         }
     }
