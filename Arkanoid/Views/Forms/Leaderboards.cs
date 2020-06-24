@@ -50,9 +50,10 @@ namespace Arkanoid.Views.Forms
             tableLayoutShowLeaderboard.SetColumnSpan(lblLeaderboards,2);
             //label array
             List<Player> topPlayers = ControllerPlayer.TopPlayer();
-            nicknameLabels = new Label[topPlayers.Count];
-            scoreLabels = new Label[topPlayers.Count];
-            for (var i = 0; i < topPlayers.Count ; i++)
+            int topPlayersCount = topPlayers.Count;
+            nicknameLabels = new Label[topPlayersCount];
+            scoreLabels = new Label[topPlayersCount];
+            for (var i = 0; i < topPlayersCount ; i++)
             {
                 nicknameLabels[i] = new Label();
                 scoreLabels[i] = new Label();
@@ -64,7 +65,6 @@ namespace Arkanoid.Views.Forms
                 nicknameLabels[i].Margin = new Padding(0, 0, 0, 0);
                 nicknameLabels[i].TextAlign = ContentAlignment.MiddleLeft;
                 nicknameLabels[i].ForeColor = Color.White;
-
                 
                 scoreLabels[i].Text = topPlayers[i].score;
                 scoreLabels[i].Font = superMario256Font3;

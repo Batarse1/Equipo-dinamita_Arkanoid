@@ -50,7 +50,6 @@ namespace Arkanoid
                 {
                     throw new WrongCharactersException("Text can only have alphanumeric and numeric characters");
                 }
-                //Posible error
                 string aux = txtNickname.Text;
                 try
                 {
@@ -170,6 +169,7 @@ namespace Arkanoid
                 else if (47<c && c<58)
                 {
                 }
+                //En caso de espacio
                 else if (c == ' ')
                 {
                 }

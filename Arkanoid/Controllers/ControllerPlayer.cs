@@ -17,7 +17,7 @@ namespace Arkanoid.Controllers
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("An error has occurred");
             }
         }
         public static void AddScore(string nickname, int score)
@@ -29,7 +29,7 @@ namespace Arkanoid.Controllers
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("An error has occurred");
             }
         }
 
@@ -46,7 +46,7 @@ namespace Arkanoid.Controllers
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("An error has ocurred");
             }
             return topPlayers;
         }
@@ -64,7 +64,7 @@ namespace Arkanoid.Controllers
             }
             catch (Exception)
             {
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("An error has ocurred");
             }
             return nicknameList;
         }

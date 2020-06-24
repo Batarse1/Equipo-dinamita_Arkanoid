@@ -11,14 +11,6 @@ namespace Arkanoid.Views.Forms
         {
             InitializeComponent();
         }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            StartMenu startMenu = new StartMenu();
-            startMenu.Show();
-            Hide();
-        }
-
         private void Instructions_Load(object sender, EventArgs e)
         {
             //Maximize window
@@ -43,6 +35,14 @@ namespace Arkanoid.Views.Forms
             btnReturn.TextAlign = ContentAlignment.MiddleCenter;
             btnReturn.TabStop = false;
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            StartMenu startMenu = new StartMenu();
+            startMenu.Show();
+            Hide();
+        }
+
 
         private void Instructions_FormClosing(object sender, FormClosingEventArgs e)
         {

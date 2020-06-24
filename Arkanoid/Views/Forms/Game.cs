@@ -52,7 +52,7 @@ namespace Arkanoid.Views.Forms
             lblScore.FlatStyle = FlatStyle.Flat;
             lblScore.Margin = new Padding(0, 0, 0, 0);
             lblScore.TextAlign = ContentAlignment.MiddleCenter;
-            lblLives.Text = player.lives = "x3";
+            lblLives.Text = player.lives;
             lblLives.Font = superMario256Font;
             lblLives.Dock = DockStyle.Fill;
             lblLives.FlatStyle = FlatStyle.Flat;
@@ -62,20 +62,15 @@ namespace Arkanoid.Views.Forms
 
         public void tableLayoutPanelGame_MouseMove(object sender, MouseEventArgs e)
         {
-            //TableLayoutColumnStyleCollection columnStyles = tableLayoutPanelGame.ColumnStyles;
-            //TableLayoutRowStyleCollection rowStyles = tableLayoutPanelGame.RowStyles;
-            //Detect mouse move only in the game panel
             if(e.Y>(tableLayoutPanelGame.RowStyles[0].Height*tableLayoutPanelGame.Height)/100){
                 StaticAttributes.location = e.X;
             }
         }
-
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Exit game
             Application.Exit();
         }
-
         private void clockTimer_Tick(object sender, EventArgs e)
         {
             if (Star.time != 0)
@@ -165,7 +160,7 @@ namespace Arkanoid.Views.Forms
                 idleCont=0;
             }
 
-            if (idleCont == 35)
+            if (idleCont == 60)
             {
                 idleCont = 0;
                 SendKeys.Send("{ESC}");

@@ -23,8 +23,8 @@ namespace Arkanoid.Views.UserControls
 
         private void Mario_and_bricks_Load(object sender, EventArgs e)
         {        
-            //Making bricks
             starMusic.SoundLocation = "super-mario-bros-nes-music-star-theme-cut.wav";
+            //Making bricks
             int thickness =  SystemInformation.BorderSize.Width;
             int xAxis = 10;
             int yAxis = 4;
@@ -192,7 +192,7 @@ namespace Arkanoid.Views.UserControls
         private void Collider2D_Tick(object sender, EventArgs e)
         {
             //Bricks collider
-            if (GameData.gameInitiated || Star.starInitiated)
+            if (GameData.gameInitiated)
             {
                 int xAxis = 10;
                 int yAxis = 4;
@@ -239,7 +239,7 @@ namespace Arkanoid.Views.UserControls
         private void MarioTimer_Tick_1(object sender, EventArgs e)
         {
             int thickness = SystemInformation.BorderSize.Width;
-            if(Convert.ToInt32(player.time.Substring(5)) == 500)
+            if(Convert.ToInt32(player.time.Substring(5)) == 700)
             {
                 Star.starInitiated = true;
                 Controls.Add(star);
@@ -342,8 +342,8 @@ namespace Arkanoid.Views.UserControls
             }
             if (mario.Bounds.IntersectsWith(star.Bounds) && GameData.gameInitiated && Star.starInitiated)
             {
-                starMusic.Play();
-                Star.time=12;
+                starMusic.PlayLooping();
+                Star.time=60;
                 if(GameData.dirX>0)
                 {
                     GameData.dirX = 10;                        
