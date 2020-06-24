@@ -116,3 +116,42 @@ C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.Copy
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
 C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.Forms.GameOver.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Arkanoid.exe.config
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Arkanoid.exe
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Arkanoid.pdb
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Npgsql.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Buffers.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Memory.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Text.Json.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.ValueTuple.dll
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Npgsql.pdb
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\Npgsql.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Buffers.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Memory.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Text.Json.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\bin\Debug\System.ValueTuple.xml
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.csprojAssemblyReference.cache
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.exe.config
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Properties.Resources.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.ChooseNickname.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Congratulations.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Game.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.GameOver.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Instructions.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.Leaderboards.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.Forms.StartMenu.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.Views.UserControls.MarioAndPlatformAndBricks.resources
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.csproj.GenerateResource.cache
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.exe
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Source code\Arkanoid\obj\Debug\Arkanoid.pdb
