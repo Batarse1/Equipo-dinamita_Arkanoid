@@ -351,18 +351,18 @@ namespace Arkanoid.Views.UserControls
                 Star.time=60;
                 if(GameData.dirX>0)
                 {
-                    GameData.dirX = 10;                        
+                    GameData.dirX = 8;                        
                     mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/RightJumpingMarioStar.png");                
                 }
                 else{
-                    GameData.dirX = -10;
+                    GameData.dirX = -8;
                     mario.BackgroundImage = Image.FromFile("../../Resources/MarioSprites/LeftJumpingMarioStar.png");
                 }
                 if(GameData.dirY>0){
-                    GameData.dirY = 10;
+                    GameData.dirY = 8;
                 }
                 else{
-                    GameData.dirY = -10;
+                    GameData.dirY = -8;
                 }
                 star.Dispose();
             }

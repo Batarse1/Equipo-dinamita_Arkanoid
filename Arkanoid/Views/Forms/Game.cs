@@ -74,7 +74,7 @@ namespace Arkanoid.Views.Forms
         }
         private void clockTimer_Tick(object sender, EventArgs e)
         {
-            //if the star has been aquired
+            //if the star has been acquired
             if (Star.time != 0)
             {
                 Star.time--;

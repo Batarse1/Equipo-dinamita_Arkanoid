@@ -115,3 +115,4 @@ C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.Core
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.csproj.CopyComplete
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.exe
 C:\Repositories\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.pdb
+C:\Users\cliente\Downloads\Progra\Equipo-dinamita_Arkanoid\Arkanoid\obj\Debug\Arkanoid.Views.Forms.GameOver.resources
